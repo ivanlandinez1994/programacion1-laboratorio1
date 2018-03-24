@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1521680090 source:d:\promedionumeros\main.c
+	<stdio.h>
+	<stdlib.h>
+
