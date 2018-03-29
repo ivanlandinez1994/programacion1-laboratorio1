@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1522285123 source:d:\programacion1-laboratorio1\clase 3 funciones\practicatp1\lib.c
+
+1522285156 source:d:\programacion1-laboratorio1\clase 3 funciones\practicatp1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+
+1522285102 d:\programacion1-laboratorio1\clase 3 funciones\practicatp1\lib.h
+
