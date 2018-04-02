@@ -10,9 +10,9 @@ int main()
     int operacionARealizar;
 
     while(operacionARealizar!=9){
-        printf("elija una opcion del menu de opciones:\n(1)para ingresar el primer operando (2)para ingresar el segundo operando"
-                "(3)sumarlos (4)restarlos (5)dividirlos\n (6)multiplicarlos (7)hacer el factorial del primer numero"
-                "(8)todas las operaciones (9)para salir.\n");
+        printf("elija una opcion del menu: (1/2/3/4/5/6/7/8/9).\n(1)para ingresar el primer operando || (2)para ingresar el segundo operando"
+                "\n(3)sumarlos (4)restarlos (5)dividirlos (6)multiplicarlos (7)hacer el factorial del primer numero"
+                "\n(8)todas las operaciones (9)para salir.\n");
         scanf("%d",&operacionARealizar);
 
         while(operacionARealizar>9 || operacionARealizar<1){
@@ -105,10 +105,11 @@ int main()
             }
         break;
         case 9:
-            operacionARealizar=9;
+            printf("fin de la aplicacion.¡");
         break;
         }
     }
+    system("cls");
     return 0;
 }
 
