@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1522885902 source:d:\clase4\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+
+1522885945 source:d:\clase4\lib.c
+	<stdio.h>
+	<stdlib.h>
+
+1522885231 d:\clase4\lib.h
+
+1522885945 source:d:\programacion1-laboratorio1\clase 4 crear biblioteca\lib.c
+	<stdio.h>
+	<stdlib.h>
+
+1522885902 source:d:\programacion1-laboratorio1\clase 4 crear biblioteca\main.c
+	<stdio.h>
+	<stdlib.h>
+	"lib.h"
+
+1522885231 d:\programacion1-laboratorio1\clase 4 crear biblioteca\lib.h
+

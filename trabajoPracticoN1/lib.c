@@ -1,20 +1,20 @@
 long sumaNumeros (int numero1, int numero2, float* resultadoSuma){
-    float resultado;
+    long long resultado;
     int retorno=-1;
     resultado= numero1 + numero2;
     if(resultado<32767){
-        *resultadoSuma=resultado;
+        *resultadoSuma=(float)resultado;
         retorno=0;
     }
     return retorno;
 }
 
 long restaNumeros(int numero1, int numero2, float* resultadoResta){
-    float resultado;
+    long long resultado;
     int retorno=-1;
     resultado=numero1 - numero2;
     if(resultado<32767){
-        *resultadoResta=resultado;
+        *resultadoResta=(float)resultado;
         retorno=0;
     }
     return retorno;
@@ -32,24 +32,24 @@ long divisionNumeros(int numero1, int numero2, float* resultadoDivision){
 }
 
 long multiplicacionNumeros(int numero1, int numero2, float*resultadoMultiplicacion){
-    float resultado;
+    long long resultado;
     int retorno=-1;
     resultado=numero1 * numero2;
     if(resultado<32767){
-        *resultadoMultiplicacion=resultado;
+        *resultadoMultiplicacion=(float)resultado;
         retorno=0;
     }
     return retorno;
 }
 long factorialNumero1(int numero1, float* resultadoFactorial){
-    float resultado=1;
+    long long resultado=1;
     int retorno=-1;
     int i;
     for(i=numero1; i>0; i--){
         resultado=resultado * i;
     }
-    if(resultado<400000){
-        *resultadoFactorial=resultado;
+    if(resultado<32767){
+        *resultadoFactorial=(float)resultado;
         retorno=0;
     }
     return retorno;

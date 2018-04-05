@@ -10,8 +10,8 @@ int main()
     int operacionARealizar;
 
     while(operacionARealizar!=9){
-        printf("elija una opcion del menu: (1/2/3/4/5/6/7/8/9).\n(1)para ingresar el primer operando || (2)para ingresar el segundo operando"
-                "\n(3)sumarlos (4)restarlos (5)dividirlos (6)multiplicarlos (7)hacer el factorial del primer numero"
+        printf("elija una opcion del menu: (1/2/3/4/5/6/7/8/9).\n(1)para ingresar el primer operando  (2)para ingresar el segundo operando"
+                "\n(3)sumarlos (4)restarlos (5)dividirlos (6)multiplicarlos\n (7)hacer el factorial del primer numero"
                 "\n(8)todas las operaciones (9)para salir.\n");
         scanf("%d",&operacionARealizar);
 
@@ -25,16 +25,16 @@ int main()
 
         switch (operacionARealizar){
         case 1:
-            printf("ingrese el primer numero\n");
+            printf("\ningrese el primer numero\n");
             scanf("%d",&numeroUno);
         break;
         case 2:
-            printf("ingrese el segundo numero\n");
+            printf("\ningrese el segundo numero\n");
             scanf("%d",&numeroDos);
         break;
         case 3:
             if(sumaNumeros(numeroUno, numeroDos, &resultadoOperacionMain)==0){
-                printf("%d + %d = %.0f\n",numeroUno,numeroDos,resultadoOperacionMain);
+                printf("\n%d + %d = %.0f\n",numeroUno,numeroDos,resultadoOperacionMain);
             }
             else{
                 printf("ERROR\n");
@@ -42,7 +42,7 @@ int main()
         break;
         case 4:
             if(restaNumeros(numeroUno, numeroDos, &resultadoOperacionMain)==0){
-                printf("%d - %d = %.0f\n",numeroUno,numeroDos,resultadoOperacionMain);
+                printf("\n%d - %d = %.0f\n",numeroUno,numeroDos,resultadoOperacionMain);
             }
             else{
                 printf("ERROR\n");
@@ -50,7 +50,7 @@ int main()
         break;
         case 5:
             if(divisionNumeros(numeroUno, numeroDos, &resultadoOperacionMain)==0){
-                printf("%d / %d = %.2f\n",numeroUno,numeroDos,resultadoOperacionMain);
+                printf("\n%d / %d = %.2f\n",numeroUno,numeroDos,resultadoOperacionMain);
             }
             else{
                 printf("ERROR\n");
@@ -58,7 +58,7 @@ int main()
         break;
         case 6:
             if(multiplicacionNumeros(numeroUno, numeroDos, &resultadoOperacionMain)==0){
-                printf("%d * %d = %.0f\n",numeroUno,numeroDos,resultadoOperacionMain);
+                printf("\n%d * %d = %.0f\n",numeroUno,numeroDos,resultadoOperacionMain);
             }
             else{
                 printf("ERROR\n");
@@ -66,7 +66,7 @@ int main()
         break;
         case 7:
             if(factorialNumero1(numeroUno, &resultadoOperacionMain)==0){
-                printf("%d ! = %.0f\n",numeroUno,resultadoOperacionMain);
+                printf("\n%d ! = %.0f\n",numeroUno,resultadoOperacionMain);
             }
             else{
                 printf("ERROR\n");
@@ -74,7 +74,7 @@ int main()
         break;
         case 8:
             if(sumaNumeros(numeroUno, numeroDos, &resultadoOperacionMain)==0){
-                printf("%d + %d = %.0f\n",numeroUno,numeroDos,resultadoOperacionMain);
+                printf("\n%d + %d = %.0f\n",numeroUno,numeroDos,resultadoOperacionMain);
             }
             else{
                 printf("ERROR\n");
