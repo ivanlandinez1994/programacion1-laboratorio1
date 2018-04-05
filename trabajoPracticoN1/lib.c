@@ -42,14 +42,14 @@ long multiplicacionNumeros(int numero1, int numero2, float*resultadoMultiplicaci
     return retorno;
 }
 long factorialNumero1(int numero1, float* resultadoFactorial){
-    long long resultado=1;
+    long long resultado=numero1;
     int retorno=-1;
-    int i;
-    for(i=numero1; i>0; i--){
-        resultado=resultado * i;
+    while(numero1>1){
+        numero1--;
+        resultado=numero1*resultado;
     }
-    if(resultado<32767){
-        *resultadoFactorial=(float)resultado;
+    if(resultado<3276700){
+        *resultadoFactorial=resultado;
         retorno=0;
     }
     return retorno;
