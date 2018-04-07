@@ -75,22 +75,30 @@ float getCalcularPromedio(int valores[], int cantidad, float *promedio){
     }
     return retorno;
 }
-/*int getMax(int tamañoArray, int contenidoArray[], int* max){
+int getValorMaximo(int valores[], int cantidad, int* maximo){
     int retorno=-1;
-    int auxiliarArray[tamañoArray];
-    int auxiliarMax;
-    int bandera=0;
     int i;
-
-    for(i=0; i<tamañoArray; i++){
-        contenidoArray[i];
-        if(bandera==0 || auxiliarMax<contenidoArray[i]){
-            auxiliarMax=contenidoArray[i];
+    int bandera=0;
+    for(i=0; i<cantidad; i++){
+        if(bandera==0 || *maximo<valores[i]){
+            *maximo=valores[i];
             bandera=1;
+            retorno=0;
         }
-        *max=auxiliarMax;
-        retorno=0;
+
     }
     return retorno;
-
-}*/
+}
+int getValorMinimo(int valores[], int cantidad, int* minimo){
+    int retorno=-1;
+    int i;
+    int bandera=0;
+    for (i=0; i<cantidad; i++){
+        if(bandera==0 || *minimo>valores[i]){
+            *minimo=valores[i];
+            bandera=1;
+            retorno=0;
+        }
+    }
+    return retorno;
+}

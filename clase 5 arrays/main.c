@@ -5,7 +5,36 @@
 
 int main()
 {
-    float promedioMain;
+    int minimo;
+    int numeros[SIZE_ARRAY];
+    int i;
+    for (i=0; i<SIZE_ARRAY; i++){
+        printf("ingrese el %d numero\n", (i+1));
+        scanf("%d",&numeros[i]);
+    }
+    if(getValorMinimo(numeros, SIZE_ARRAY, &minimo)==0){
+        printf("el valor minimo es: %d\n", minimo);
+    }
+    return 0;
+
+}
+
+
+/*int maximo;
+    int numeros[SIZE_ARRAY];
+    int i;
+
+    for (i=0; i<SIZE_ARRAY; i++){
+        printf("ingrese el %d numero\n", i+1);
+        scanf("%d", &numeros[i]);
+    }
+    if(getValorMaximo(numeros, SIZE_ARRAY, &maximo)==0){
+        printf("el valor maximo es: %d\n",maximo);
+    }*/
+
+
+
+    /*float promedioMain;
     int numeros[SIZE_ARRAY];
     int i;
     for (i=0; i<SIZE_ARRAY; i++){
@@ -19,8 +48,4 @@ int main()
     }
     else {
         printf("ERROR");
-    }
-
-    return 0;
-
-}
+    }*/
