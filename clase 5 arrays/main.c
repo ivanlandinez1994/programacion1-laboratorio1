@@ -3,7 +3,7 @@
 #include "lib.h"
 #define SIZE_ARRAY 5
 
-int main()
+/*int main()
 {
     int minimo;
     int numeros[SIZE_ARRAY];
@@ -17,10 +17,12 @@ int main()
     }
     return 0;
 
-}
+}*/
 
 
-/*int maximo;
+/*int main()
+{
+    int maximo;
     int numeros[SIZE_ARRAY];
     int i;
 
@@ -30,22 +32,25 @@ int main()
     }
     if(getValorMaximo(numeros, SIZE_ARRAY, &maximo)==0){
         printf("el valor maximo es: %d\n",maximo);
-    }*/
+    }
+}*/
 
 
-
-    /*float promedioMain;
+int main(){
+    float promedioMain;
     int numeros[SIZE_ARRAY];
     int i;
     for (i=0; i<SIZE_ARRAY; i++){
-        //if(getInt(&numeros[i], "ingrese numero\n", "el numero ingresado no es valido\n", 200, -200, 3)==0){
-            printf("ingrese numero %d\n",i+1);
-            scanf("%d",&numeros[i]);
+        if(getInt(&numeros[i], "ingrese numero", "el ingreso no fue valido", 32767, -32767, 3)==0){
         }
-
+        else{
+            printf("valores ingresados no validos");
+        }
+    }
     if(getCalcularPromedio(numeros, SIZE_ARRAY, &promedioMain)==0){
         printf("el promedio del array es: %.2f",promedioMain);
     }
     else {
         printf("ERROR");
-    }*/
+    }
+}
