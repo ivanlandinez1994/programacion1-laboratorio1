@@ -4,35 +4,55 @@
 
 int main()
 {
-    int numeroUno;
-    int numeroDos;
+    int numeroUno=0;
+    int numeroDos=0;
     float resultadoOperacionMain;
     int operacionARealizar;
 
     while(operacionARealizar!=9){
-        printf("elija una opcion del menu: (1/2/3/4/5/6/7/8/9).\n(1)para ingresar el primer operando  (2)para ingresar el segundo operando"
-                "\n(3)sumarlos (4)restarlos (5)dividirlos (6)multiplicarlos\n (7)hacer el factorial del primer numero"
-                "\n(8)todas las operaciones (9)para salir.\n");
+
+        printf("\nelija una opcion del menu:\n");
+        printf("1- Ingresar 1er operando (A=%d)\n", numeroUno);
+        printf("2- Ingresar 2do operando (B=%d)\n", numeroDos);
+        printf("3- Calcular la suma (%d+%d)\n", numeroUno, numeroDos);
+        printf("4- Calcular la resta (%d-%d)\n", numeroUno, numeroDos);
+        printf("5- Calcular la division (%d/%d)\n", numeroUno, numeroDos);
+        printf("6- Calcular la multiplicacion (%d*%d)\n", numeroUno, numeroDos);
+        printf("7- Calcular el factorial (%d!)\n", numeroUno);
+        printf("8- Calcular todas las operacione\n");
+        printf("9- Salir\n");
+
         scanf("%d",&operacionARealizar);
 
         while(operacionARealizar>9 || operacionARealizar<1){
-            printf( "elija una opcion del menu de opciones:\n(1) para ingresar el primer operando(2) para ingresar el segundo operando"
-                "(3) sumarlos(4) restarlos(5) dividirlos\n(6) multiplicarlos(7) hacer el factorial del primer numero"
-                "(8) todas las operaciones(9) para salir.\n");
+            system("cls");
+            printf("\nelija una opcion del menu:\n");
+            printf("1- Ingresar 1er operando (A=%d)\n", numeroUno);
+            printf("2- Ingresar 2do operando (B=%d)\n", numeroDos);
+            printf("3- Calcular la suma (%d+%d)\n", numeroUno, numeroDos);
+            printf("4- Calcular la resta (%d-%d)\n", numeroUno, numeroDos);
+            printf("5- Calcular la division (%d/%d)\n", numeroUno, numeroDos);
+            printf("6- Calcular la multiplicacion (%d*%d)\n", numeroUno, numeroDos);
+            printf("7- Calcular el factorial (%d!)\n", numeroUno);
+            printf("8- Calcular todas las operacione\n");
+            printf("9- Salir\n");
             fflush(stdin);
             scanf("%d",&operacionARealizar);
         }
 
         switch (operacionARealizar){
         case 1:
+            system("cls");
             printf("\ningrese el primer numero\n");
             scanf("%d",&numeroUno);
         break;
         case 2:
+            system("cls");
             printf("\ningrese el segundo numero\n");
             scanf("%d",&numeroDos);
         break;
         case 3:
+            system("cls");
             if(sumaNumeros(numeroUno, numeroDos, &resultadoOperacionMain)==0){
                 printf("\n%d + %d = %.0f\n",numeroUno,numeroDos,resultadoOperacionMain);
             }
@@ -41,6 +61,7 @@ int main()
             }
         break;
         case 4:
+            system("cls");
             if(restaNumeros(numeroUno, numeroDos, &resultadoOperacionMain)==0){
                 printf("\n%d - %d = %.0f\n",numeroUno,numeroDos,resultadoOperacionMain);
             }
@@ -49,6 +70,7 @@ int main()
             }
         break;
         case 5:
+            system("cls");
             if(divisionNumeros(numeroUno, numeroDos, &resultadoOperacionMain)==0){
                 printf("\n%d / %d = %.2f\n",numeroUno,numeroDos,resultadoOperacionMain);
             }
@@ -57,6 +79,7 @@ int main()
             }
         break;
         case 6:
+            system("cls");
             if(multiplicacionNumeros(numeroUno, numeroDos, &resultadoOperacionMain)==0){
                 printf("\n%d * %d = %.0f\n",numeroUno,numeroDos,resultadoOperacionMain);
             }
@@ -65,6 +88,7 @@ int main()
             }
         break;
         case 7:
+            system("cls");
             if(factorialNumero1(numeroUno, &resultadoOperacionMain)==0){
                 printf("\n%d ! = %.0f\n",numeroUno,resultadoOperacionMain);
             }
@@ -73,6 +97,7 @@ int main()
             }
         break;
         case 8:
+            system("cls");
             if(sumaNumeros(numeroUno, numeroDos, &resultadoOperacionMain)==0){
                 printf("\n%d + %d = %.0f\n",numeroUno,numeroDos,resultadoOperacionMain);
             }
@@ -88,6 +113,9 @@ int main()
             if(divisionNumeros(numeroUno, numeroDos, &resultadoOperacionMain)==0){
                 printf("%d / %d = %.2f\n",numeroUno,numeroDos,resultadoOperacionMain);
             }
+            else if(divisionNumeros(numeroUno, numeroDos, &resultadoOperacionMain)==-2){
+                printf("el divisior debe ser diferente de 0 para poder llevar a cabo la division\n");
+            }
             else{
                 printf("ERROR\n");
             }
@@ -101,15 +129,14 @@ int main()
                 printf("%d ! = %.0f\n",numeroUno,resultadoOperacionMain);
             }
             else{
-                printf("ERROR\n");
+                printf("ERROR, resultado fuera de rango ingrese un numero mas pequeño para allar su factorial\n");
             }
         break;
         case 9:
-            printf("fin de la aplicacion.¡");
+            printf("\nFin de la aplicacion.");
         break;
         }
     }
-    system("cls");
     return 0;
 }
 
