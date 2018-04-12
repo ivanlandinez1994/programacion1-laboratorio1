@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1523495024 source:d:\programacion1-laboratorio1\clase 6 ordenar array forma 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"sort.h"
+
+1523494598 d:\programacion1-laboratorio1\clase 6 ordenar array forma 2\sort.h
+
+1523495174 source:d:\programacion1-laboratorio1\clase 6 ordenar array forma 2\sort.c
+	<stdio.h>
+	<stdlib.h>
+

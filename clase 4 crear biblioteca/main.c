@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "lib.h"
+#include "get.h"
 /*int main(){
     int edad;
     if(getInt(&edad,"ingrese la edad","el rango de edad valido es: [1-199]",199,1,2)==0){

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "lib.h"
+#include "opr.h"
 #define SIZE_ARRAY 5
 
 /*int main()
@@ -53,4 +53,5 @@ int main(){
     else {
         printf("ERROR");
     }
+    return 0;
 }

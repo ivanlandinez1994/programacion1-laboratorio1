@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1523492547 source:d:\programacion1-laboratorio1\clase 6 cadena de caracteres\main.c
+	<stdio.h>
+	<stdlib.h>
+	"sort.h"
+
+1523484861 d:\programacion1-laboratorio1\clase 6 cadena de caracteres\lib.h
+
+1523484877 source:d:\programacion1-laboratorio1\clase 6 cadena de caracteres\lib.c
+	<stdio.h>
+	<stdlib.h>
+
+1523492617 source:d:\programacion1-laboratorio1\clase 6 cadena de caracteres\sort.c
+	<stdio.h>
+	<stdlib.h>
+
+1523489368 d:\programacion1-laboratorio1\clase 6 cadena de caracteres\sort.h
+

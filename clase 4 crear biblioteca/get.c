@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-int getInt(int* resultado, char* mensaje, char* mensajeError, int maximo, int minimo, int reintentos){
+int get_getInt(int* resultado, char* mensaje, char* mensajeError, int maximo, int minimo, int reintentos){
 
     int retorno=-1;
     long auxiliarLongNumeroIngresado;
@@ -21,7 +21,7 @@ int getInt(int* resultado, char* mensaje, char* mensajeError, int maximo, int mi
     return retorno;
 }
 
-int getFloat(float *resultado, char* mensaje, char* mensajeError, float maximo, float minimo, int reintentos){
+int get_getFloat(float *resultado, char* mensaje, char* mensajeError, float maximo, float minimo, int reintentos){
     int retorno=-1;
     float auxiliarNumeroIngresado;
 
@@ -41,7 +41,7 @@ int getFloat(float *resultado, char* mensaje, char* mensajeError, float maximo, 
     return retorno;
 }
 
-int getChar(char *resultado, char* mensaje, char* mensajeError, char maximo, char minimo, int reintentos){
+int get_getChar(char *resultado, char* mensaje, char* mensajeError, char maximo, char minimo, int reintentos){
     int retorno=-1;
     char auxiliarCharIngresado;
 
@@ -61,36 +61,3 @@ int getChar(char *resultado, char* mensaje, char* mensajeError, char maximo, cha
     }while(reintentos>=0);
     return retorno;
 }
-float getCalcularPromedio(int valores[], int cantidad, float *promedio){
-    int auxiliarAcumulador=0;
-    int i;
-    int retorno=-1;
-
-    if(cantidad>=0){
-        for (i=0; i<cantidad; i++){
-            auxiliarAcumulador=valores[i]+auxiliarAcumulador;
-        }
-        *promedio=((float)auxiliarAcumulador)/cantidad;
-        return 0;
-    }
-    return retorno;
-}
-/*int getMax(int tamañoArray, int contenidoArray[], int* max){
-    int retorno=-1;
-    int auxiliarArray[tamañoArray];
-    int auxiliarMax;
-    int bandera=0;
-    int i;
-
-    for(i=0; i<tamañoArray; i++){
-        contenidoArray[i];
-        if(bandera==0 || auxiliarMax<contenidoArray[i]){
-            auxiliarMax=contenidoArray[i];
-            bandera=1;
-        }
-        *max=auxiliarMax;
-        retorno=0;
-    }
-    return retorno;
-
-}*/

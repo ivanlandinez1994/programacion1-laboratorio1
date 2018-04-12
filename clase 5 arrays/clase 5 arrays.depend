@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1523413758 source:d:\programacion1-laboratorio1\clase 5 arrays\main.c
+1523482852 source:d:\programacion1-laboratorio1\clase 5 arrays\main.c
 	<stdio.h>
 	<stdlib.h>
 	"lib.h"
 
-1523413758 source:d:\programacion1-laboratorio1\clase 5 arrays\lib.c
+1523495662 source:d:\programacion1-laboratorio1\clase 5 arrays\lib.c
 	<stdio.h>
 	<stdlib.h>
 
-1523413758 d:\programacion1-laboratorio1\clase 5 arrays\lib.h
+1523482852 d:\programacion1-laboratorio1\clase 5 arrays\lib.h
 
