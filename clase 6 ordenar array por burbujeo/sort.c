@@ -14,16 +14,18 @@ int sort_ordenarArrayInt(int* array, int cantidad, int flagOrden){
     int retorno=-1;
     int flagSwap;
     int i;
-    do{
-        flagSwap=0;
-        for(i=0; i<cantidad-1; i++){
-            if((array[i]<array[i+1] && flagOrden) || (array[i]>array[i+1] && !flagOrden)){
-                swapInt(&array[i], &array[i+1]);
-                flagSwap=1;
-                retorno=0;
+    if(cantidad>0){
+        retorno=0;
+        do{
+            flagSwap=0;
+            for(i=0; i<cantidad-1; i++){
+                if((array[i]<array[i+1] && flagOrden) || (array[i]>array[i+1] && !flagOrden)){
+                    swapInt(&array[i], &array[i+1]);
+                    flagSwap=1;
+                }
             }
-        }
-    }while(flagSwap);
+        }while(flagSwap);
+    }
     return retorno;
 }
 /** \brief muestra los elementos del array
@@ -35,9 +37,11 @@ int sort_ordenarArrayInt(int* array, int cantidad, int flagOrden){
 int sort_mostrarArrayEnteros(int* array, int cantidad){
     int retorno=-1;
     int i;
-    for (i=0; i<cantidad; i++){
-        printf("\n%d", array[i]);
+    if(cantidad>0){
         retorno=0;
+        for (i=0; i<cantidad; i++){
+            printf("\n%d", array[i]);
+        }
     }
     return retorno;
 }
