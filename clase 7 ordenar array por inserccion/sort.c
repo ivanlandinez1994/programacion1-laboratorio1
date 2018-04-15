@@ -21,8 +21,11 @@ int sort_expandirArray(int* array, int cantidad/*, int desde, int hasta*/){
 int sort_mostrarArray(int* array, int cantidad){
     int i;
     int retorno=-1;
-    for(i=0; i<cantidad; i++){
-        printf("\n%d", array[i]);
+    if(cantidad>0){
+        retorno=0;
+        for(i=0; i<cantidad; i++){
+            printf("\n%d", array[i]);
+        }
     }
     return retorno;
 }

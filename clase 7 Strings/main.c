@@ -27,13 +27,11 @@ int main()
 
     /*int length=strlen(array);
     for(i=0; i<length; i++){
-        //gets(c);
         printf("%c\n",array[i]);
     }*/
     //printf("\n%d\n", strlen(array));
 
     /*for(i=0; i<sizeof(array); i++){
-        //gets(c);
         printf("%c",array[i]);
     }*/
     /*while(array[i]!=0){

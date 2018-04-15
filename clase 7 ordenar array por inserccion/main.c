@@ -4,7 +4,7 @@
 #define SIZE_ARRAY 7
 int main()
 {
-    int numeros[SIZE_ARRAY]={10,5,4,2,6,1,-1};
+    int numeros[SIZE_ARRAY]={10,5,4,-1,6,1,-1};
     sort_mostrarArray(numeros, SIZE_ARRAY);
     printf("\n");
     sort_expandirArray(numeros, SIZE_ARRAY);

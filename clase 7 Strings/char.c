@@ -7,7 +7,7 @@ int getInt(char* array, int cantidad, int* resultado){
     if(cantidad>0){
         printf("\ningrese los numeros deseados\n");
         fgets(array, sizeof(array), stdin);
-        array[strlen(array)-1]=0;
+        //array[strlen(array)-1]=0;
         for(i=0; i<strlen(array); i++){
             if(array[i]>'9' || array[i]<'0'){
                 retorno=-1;

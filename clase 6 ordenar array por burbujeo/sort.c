@@ -6,7 +6,7 @@ int swapInt(int* primerNumero, int* segundoNumero);
  *
  * \param puntero que refiere al array
  * \param cantidad de elementos del array
- * \param se define si se quiere ordenar de mayor a menor o menor a mayor
+ * \param (1) para ordenar de mayor a menor (0) menor a mayor
  * \return (-1) error (0) ok
  *
  */

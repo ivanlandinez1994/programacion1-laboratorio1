@@ -1,14 +1,14 @@
 # depslib dependency file v1.0
-1523582629 source:d:\programacion1-laboratorio1\clase 7 strings\main.c
+1523819722 source:d:\programacion1-laboratorio1\clase 7 strings\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"char.h"
 
-1523582933 source:d:\programacion1-laboratorio1\clase 7 strings\char.c
+1523819722 source:d:\programacion1-laboratorio1\clase 7 strings\char.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1523582585 d:\programacion1-laboratorio1\clase 7 strings\char.h
+1523811050 d:\programacion1-laboratorio1\clase 7 strings\char.h
 
