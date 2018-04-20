@@ -3,20 +3,6 @@
 #include <string.h>
 #include "est.h"
 
-/*typedef struct
-{
-    int dia;
-    int anio;
-    char mes[20];
-}EFecha;
-typedef struct
-{
-    char nombre[50];
-    char apellido[50];
-    int legajo;
-    EFecha fechaNacimiento;
-}EPersona;*/
-
 int main()
 {
     EPersona personas[3];
@@ -35,7 +21,6 @@ int main()
     {
        printf("\nla persona es: %s %s y tiene %d años\n",personas[i].nombre, personas[i].apellido, personas[i].edad);
     }
-
     /*EPersona persona1;
     printf("ingrese nombre\n");
     gets(persona1.nombre);

@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1524186844 source:d:\programacion1-laboratorio1\clase 9 estructuras\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"est.h"
+
+1524186261 d:\programacion1-laboratorio1\clase 9 estructuras\est.h
+
+1524186260 source:d:\programacion1-laboratorio1\clase 9 estructuras\est.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"est.h"
+
