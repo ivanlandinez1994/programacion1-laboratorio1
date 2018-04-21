@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include "est.h"
+int validarString(char auxString[]);
+int validarFloat(char* array, float* resultado);
+
 int cargarDatosProductos(EProducto* arrayProductos, int subIndice, int sizeArray, int ID)
 {
     int retorno=-1;
@@ -16,23 +19,44 @@ int cargarDatosProductos(EProducto* arrayProductos, int subIndice, int sizeArray
         printf("\ningrese el nombre del producto\n");
         fflush(stdin);
         fgets(auxNombre, sizeof(auxNombre), stdin);
-        auxNombre[strlen(auxNombre)-1]=0;
-        //validar
+        auxNombre[strlen(auxNombre)-1]=0;// se le quita el ultimo enter que se guarda en el array.
+        if(validarString(auxNombre)==0) //se valida que haya ingresado los datos correctamente
+        {
+            printf("nombre cargado\n");
+            strcpy(arrayProductos[subIndice].nombre, auxNombre);//se copia el auxiliar en la variable perteneciente habiendo validado todo
+        }
+        else
+        {
+            printf("el dato ingresado no es correcto, dato no cargado\n");
+        }
+
         printf("ingrese descripcion del producto\n");
         fflush(stdin);
         fgets(auxDescripcion, sizeof(auxDescripcion), stdin);
         auxDescripcion[strlen(auxDescripcion)-1]=0;
-        //validar
+        if(validarString(auxDescripcion)==0)
+        {
+            printf("descripcion cargada\n");
+            strcpy(arrayProductos[subIndice].descripcion, auxDescripcion);
+        }
+        else
+        {
+            printf("el dato ingresado no es correcto, dato no cargado\n");
+        }
+
         printf("ingrese el precio del producto\n");
         fflush(stdin);
         fgets(auxPrecio, sizeof(auxPrecio), stdin);
         auxPrecio[strlen(auxPrecio)-1]=0;
-        //validar
-        auxPrecioF=atof(auxPrecio);
-
-        arrayProductos[subIndice].precio=auxPrecioF;
-        strcpy(arrayProductos[subIndice].nombre, auxNombre);
-        strcpy(arrayProductos[subIndice].descripcion, auxDescripcion);
+        if(validarFloat(auxPrecio, &auxPrecioF)==0)
+        {
+            printf("precio cargado\n");
+            arrayProductos[subIndice].precio=auxPrecioF;
+        }
+        else
+        {
+            printf("el dato ingresado no es correcto, dato no cargado\n");
+        }
 
         arrayProductos[subIndice].flagVacio=0;
         if(arrayProductos[subIndice].flagVacio==0)
@@ -74,6 +98,37 @@ int devolverIndiceVacion(EProducto* arrayProductos, int sizeArray)
             printf("el subindice en el array que esta vacio es: %d", auxiliarIndiceVacio);
             break;
         }
+    }
+    return retorno;
+}
+int validarString(char auxiliar[])
+{
+    int retorno=0;
+    int i=0;
+    while(i<strlen(auxiliar))
+    {
+        if((auxiliar[i] != ' ') && (auxiliar[i] < 'a' || auxiliar[i] > 'z') && (auxiliar[i] < 'A' || auxiliar[i] > 'Z'))
+        {
+            retorno=-1;
+        }
+        i++;
+    }
+    return retorno;
+}
+int validarFloat(char* array, float* resultado){
+    int retorno=0;
+    int i;
+    for(i=0; i<strlen(array); i++){
+        if(array[i]>'9' || array[i]<'0'){
+            retorno=-1;
+            break;
+        }
+    }
+    if(retorno==0){
+        *resultado=atof(array);
+    }
+    else{
+        printf("no ingreso un numero");
     }
     return retorno;
 }

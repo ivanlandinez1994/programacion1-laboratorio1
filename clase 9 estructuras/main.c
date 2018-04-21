@@ -15,7 +15,6 @@ int main()
     for(i=0; i<ARRAY_SYZE; i++)
     {
         productos[i].flagVacio=1;
-
     }
     do
     {
@@ -52,7 +51,6 @@ int main()
                 {
                     mostrarDatosProductos(productos, i, ARRAY_SYZE);
                     printf("\n");
-                    //devolverIndiceVacion(productos, ARRAY_SYZE);
                 }
             break;
             default:
