@@ -10,10 +10,12 @@ int main()
     int i;
     int subIndice;
     char continuar='s';
-
+    int ID;
+    ID=0;
     for(i=0; i<ARRAY_SYZE; i++)
     {
         productos[i].flagVacio=1;
+
     }
     do
     {
@@ -33,7 +35,8 @@ int main()
                 }
                 else
                 {
-                    if(cargarDatosProductos(productos, subIndice, ARRAY_SYZE)==0)
+                    ID++;
+                    if(cargarDatosProductos(productos, subIndice, ARRAY_SYZE, ID)==0)
                     {
                         printf("el subindice es valido\n");
                     }
