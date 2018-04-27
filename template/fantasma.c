@@ -5,6 +5,9 @@
 #include "fantasma.h"
 #include "utn.h"
 
+static int buscarPorId(Fantasma* array, int limite, int id);
+static int buscarLugarLibre(Fantasma* array,int limite);
+static int proximoId();
 /** \brief
  * \param array Fantasma*
  * \param limite int
@@ -197,7 +200,24 @@ int buscarLugarLibre(Fantasma* array,int limite)
     }
     return retorno;
 }
-
+static int buscarPorId(Fantasma* array, int limite, int id)
+{
+    int retorno = -1;
+    int i;
+    if(limite > 0 && array != NULL)
+    {
+        retorno = -2;
+        for(i=0;i<limite;i++)
+        {
+            if(!array[i].isEmpty && array[i].idPantalla==id)
+            {
+                retorno = i;
+                break;
+            }
+        }
+    }
+    return retorno;
+}
 
 int proximoId()
 {

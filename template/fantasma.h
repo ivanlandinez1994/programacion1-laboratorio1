@@ -17,7 +17,5 @@ int fantasma_alta(Fantasma* array,int limite);
 int fantasma_baja(Fantasma* array,int limite, int id);
 int fantasma_modificacion(Fantasma* array,int limite, int id);
 int fantasma_ordenar(Fantasma* array,int limite, int orden);
-int buscarLugarLibre(Fantasma* array,int limite);
-int proximoId();
 
 

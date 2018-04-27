@@ -5,6 +5,10 @@
 #include "pantalla.h"
 #include "utn.h"
 
+
+static int pantalla_proximoId();
+static int pantalla_buscarLugarLibre(Pantalla* array,int limite);
+
 /** \brief
  * \param array Pantalla*
  * \param limite int
@@ -35,7 +39,7 @@ int pantalla_mostrarDebug(Pantalla* array,int limite)
         retorno = 0;
         for(i=0;i<limite;i++)
         {
-            printf("[DEBUG] - %d - %s - %s - %d - %d\n",array[i].idPantalla, array[i].nombre, array[i].isEmpty);
+            printf("[DEBUG] - %d - %s - %s - %f - %d - %d\n",array[i].idPantalla, array[i].nombre,array[i].direccion,array[i].precio,array[i].tipo, array[i].isEmpty);
         }
     }
     return retorno;
@@ -61,31 +65,31 @@ int pantalla_alta(Pantalla* array,int limite)
 {
     int retorno = -1;
     int i;
-    char auxNombre[50];
-    char auxDireccion[50];
-    float auxPrecio;
-    int auxTipo;
+    char nombre[50];
+    char direccion[50];
+    float precio;
+    int tipo;
     if(limite > 0 && array != NULL)
     {
-        i = buscarLugarLibre(array,limite);
+        i = pantalla_buscarLugarLibre(array,limite);
         if(i >= 0)
         {
-            if(!getValidString("\nNombre? ","\nEso no es un nombre","El maximo es 40",auxNombre,40,2))
+            if(!getValidString("\nNombre? ","\nEso no es un nombre","El maximo es 40",nombre,40,2))
             {
-                if(!getValidString("\nDireccion? ","\nEso no es una direccion","El maximo es 40",auxDireccion,40,2))
+                if(!getValidString("\nDireccion? ","\nEso no es un direccion","El maximo es 40",direccion,40,2))
                 {
-                    if(!getValidFloat("\nPrecio? ","\nEso no es un precio",&auxPrecio,0,9999999,3))
+                    if(!getValidFloat("\nPrecio? ","\nEso no es un precio",&precio,0,9999999,2))
                     {
-                        if(!getValidInt("\nTipo? ","\nEso no es un precio",&auxTipo,0,1,2))
+                        if(!getValidInt("\nTipo? ","\nEso no es un precio",&tipo,0,1,2))
                         {
                             retorno = 0;
-                            strcpy(array[i].direccion,auxNombre);
-                            strcpy(array[i].direccion,auxDireccion);
-                            array[i].precio = auxPrecio;
-                            array[i].tipo= auxTipo;
+                            strcpy(array[i].nombre,nombre);
+                            strcpy(array[i].direccion,direccion);
+                            array[i].precio = precio;
+                            array[i].tipo = tipo;
                             //------------------------------
                             //------------------------------
-                            array[i].idPantalla = proximoId();
+                            array[i].idPantalla = pantalla_proximoId();
                             array[i].isEmpty = 0;
                         }
                     }
@@ -105,62 +109,56 @@ int pantalla_alta(Pantalla* array,int limite)
     return retorno;
 }
 
-
 int pantalla_baja(Pantalla* array,int limite, int id)
 {
     int retorno = -1;
-    int i;
-    if(limite > 0 && array != NULL)
+    int indiceAEliminar;
+
+    indiceAEliminar=pantalla_buscarPorId(array,limite,id);
+    if(indiceAEliminar>=0)
     {
-        retorno = -2;
-        for(i=0;i<limite;i++)
-        {
-            if(!array[i].isEmpty && array[i].idPantalla==id)
-            {
-                array[i].isEmpty = 1;
-                retorno = 0;
-                break;
-            }
-        }
+        retorno = 0;
+        array[indiceAEliminar].isEmpty = 1;
     }
+
     return retorno;
 }
 
-/** \brief
- *
- * \param array Pantalla*
- * \param limite int
- * \param id int
- * \return int
- *
- */
 int pantalla_modificacion(Pantalla* array,int limite, int id)
 {
     int retorno = -1;
-    int i;
-    char buffer[50];
-    if(limite > 0 && array != NULL)
+    int indiceAModificar;
+    char nombre[50];
+    char direccion[50];
+    float precio;
+    int tipo;
+    indiceAModificar=pantalla_buscarPorId(array,limite,id);
+    if(indiceAModificar>=0)
     {
-        retorno = -2;
-        for(i=0;i<limite;i++)
+        if(!getValidString("\nNombre? ","\nEso no es un nombre","El maximo es 40",nombre,40,2))
         {
-            if(!array[i].isEmpty && array[i].idPantalla==id)
+            if(!getValidString("\nDireccion? ","\nEso no es un direccion","El maximo es 40",direccion,40,2))
             {
-                if(!getValidString("\nNombre? ","\nEso no es un nombre","El maximo es 40",buffer,40,2))
+                if(!getValidFloat("\nPrecio? ","\nEso no es un precio",&precio,0,9999999,2))
                 {
-                    retorno = 0;
-                    strcpy(array[i].nombre,buffer);
-                    //------------------------------
-                    //------------------------------
+                    if(!getValidInt("\nTipo? ","\nEso no es un precio",&tipo,0,1,2))
+                    {
+                        retorno = 0;
+                        strcpy(array[indiceAModificar].nombre,nombre);
+                        strcpy(array[indiceAModificar].direccion,direccion);
+                        array[indiceAModificar].precio = precio;
+                        array[indiceAModificar].tipo = tipo;
+                        array[indiceAModificar].idPantalla = pantalla_proximoId();
+                        array[indiceAModificar].isEmpty = 0;
+                    }
                 }
-                else
-                {
-                    retorno = -3;
-                }
-                retorno = 0;
-                break;
             }
         }
+        else
+        {
+            retorno = -3;
+        }
+        retorno = 0;
     }
     return retorno;
 }
@@ -195,7 +193,7 @@ int pantalla_ordenar(Pantalla* array,int limite, int orden)
     return retorno;
 }
 
-int buscarLugarLibre(Pantalla* array,int limite)
+static int pantalla_buscarLugarLibre(Pantalla* array,int limite)
 {
     int retorno = -1;
     int i;
@@ -213,8 +211,26 @@ int buscarLugarLibre(Pantalla* array,int limite)
     return retorno;
 }
 
+int pantalla_buscarPorId(Pantalla* array, int limite, int id)
+{
+    int retorno = -1;
+    int i;
+    if(limite > 0 && array != NULL)
+    {
+        retorno = -2;
+        for(i=0;i<limite;i++)
+        {
+            if(!array[i].isEmpty && array[i].idPantalla==id)
+            {
+                retorno = i;
+                break;
+            }
+        }
+    }
+    return retorno;
+}
 
-int proximoId()
+static int pantalla_proximoId()
 {
     static int proximoId = -1;
     proximoId++;

@@ -4,40 +4,47 @@
 #include <string.h>
 #include "pantalla.h"
 #include "utn.h"
-#define SIZE 10
+#include "contratacion.h"
+#define sizeArrayPantalla 100
+#define sizeArrayContrataciones 1000
+
+
+
 
 int main()
 {
-    Pantalla array[SIZE];
-
+    Pantalla array[sizeArrayPantalla];
+    Contratacion arrayContrataciones[sizeArrayContrataciones];
     int menu;
     int auxiliarId;
 
-    pantalla_init(array,SIZE);
+    pantalla_init(array,sizeArrayPantalla);
+    contratacion_init(arrayContrataciones, sizeArrayContrataciones);
+
     do
     {
         getValidInt("1.Alta\n2.Baja\n3.Modificar\n4.Mostrar\n5.Ordenar\n6.Mostrar Debug\n9.Salir\n","\nNo valida\n",&menu,1,9,1);
         switch(menu)
         {
             case 1:
-                pantalla_alta(array,SIZE);
+                pantalla_alta(array,sizeArrayPantalla);
                 break;
             case 2:
                 getValidInt("ID?","\nNumero valida\n",&auxiliarId,0,200,2);
-                pantalla_baja(array,SIZE,auxiliarId);
+                pantalla_baja(array,sizeArrayPantalla,auxiliarId);
                 break;
             case 3:
                 getValidInt("ID?","\nNumero valida\n",&auxiliarId,0,200,2);
-                pantalla_modificacion(array,SIZE,auxiliarId);
+                pantalla_modificacion(array,sizeArrayPantalla,auxiliarId);
                 break;
             case 4:
-                pantalla_mostrar(array,SIZE);
+                pantalla_mostrar(array,sizeArrayPantalla);
                 break;
             case 5:
-                pantalla_ordenar(array,SIZE,1);
+                pantalla_ordenar(array,sizeArrayPantalla,0);
                 break;
             case 6:
-                pantalla_mostrarDebug(array,SIZE);
+                pantalla_mostrarDebug(array,sizeArrayPantalla);
                 break;
         }
 
