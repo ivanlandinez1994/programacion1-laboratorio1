@@ -80,15 +80,14 @@ int pantalla_alta(Pantalla* array,int limite)
                 {
                     if(!getValidFloat("\nPrecio? ","\nEso no es un precio",&precio,0,9999999,2))
                     {
-                        if(!getValidInt("\nTipo? ","\nEso no es un precio",&tipo,0,1,2))
+                        if(!getValidInt("\nTipo: (1) para LCD (2) para LED pantallas gigantes? ","\nEso no es un precio",&tipo,0,1,2))
                         {
                             retorno = 0;
                             strcpy(array[i].nombre,nombre);
                             strcpy(array[i].direccion,direccion);
                             array[i].precio = precio;
                             array[i].tipo = tipo;
-                            //------------------------------
-                            //------------------------------
+
                             array[i].idPantalla = pantalla_proximoId();
                             array[i].isEmpty = 0;
                         }
