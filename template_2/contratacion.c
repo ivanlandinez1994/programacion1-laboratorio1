@@ -53,7 +53,7 @@ int contratacion_mostrar(Contratacion* array,int limite, Pantalla* arrayPantalla
         for(i=0;i<limite;i++)
         {
             if(!array[i].isEmpty)
-                printf("[RELEASE] -cuit: %f - idpantall: %d - dias: %d - Nombre: %s - IdContrat: %d - %d \n",array[i].cuit, array[i].idPantalla, array[i].dias, array[i].archivo, array[i].idContratacion, array[i].isEmpty);
+                printf("cuit: %f - idpantall: %d - dias: %d - Nombre: %s - IdContrat: %d - %d \n",array[i].cuit, array[i].idPantalla, array[i].dias, array[i].archivo, array[i].idContratacion, array[i].isEmpty);
         }
     }
     return retorno;

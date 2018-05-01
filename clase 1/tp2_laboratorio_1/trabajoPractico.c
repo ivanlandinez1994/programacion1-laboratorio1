@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-#include "personas.h"
+#include "trabajoPractico.h"
 #include "utn.h"
 static int buscarLugarLibre(EPersonas* array,int limite);
 
@@ -20,18 +20,6 @@ int personas_init(EPersonas* array,int limite)
     }
     return retorno;
 }
-    int retorno = -1;
-    int i;
-    if(limite > 0 && array != NULL)
-    {
-        retorno = 0;
-        for(i=0;i<limite;i++)
-        {
-            printf("[DEBUG] - %d - %s - %d\n",array[i].idEPersonas, array[i].nombre, array[i].isEmpty);
-        }
-    }
-    return retorno;
-}
 
 int personas_mostrar(EPersonas* array,int limite)
 {
@@ -43,7 +31,7 @@ int personas_mostrar(EPersonas* array,int limite)
         for(i=0;i<limite;i++)
         {
             if(!array[i].isEmpty)
-                printf("[RELEASE] - %d - %s - %d\n",array[i].idEPersonas, array[i].nombre, array[i].isEmpty);
+                printf("Nombre: %s\nEdad: %d\n",array[i].nombre, array[i].edad);
         }
     }
     return retorno;
@@ -53,20 +41,20 @@ int personas_alta(EPersonas* array,int limite)
 {
     int retorno = -1;
     char auxNombre[50];
-    char auxEdad[10];
+    int auxEdad;
     int i;
     if(limite > 0 && array != NULL)
     {
         i = buscarLugarLibre(array,limite);
         if(i >= 0)
         {
-            if(!getValidString("\nNombre? ","\nEso no es un nombre","El maximo es 40",&auxNombre,40,2))
+            if(!getValidString("\nNombre? ","\nEso no es un nombre","El maximo es 40",auxNombre,40,2))
             {
                 if(!getValidInt("\nEdad?","\neso no es una edad",&auxEdad,1,150,2))
                 {
                     retorno = 0;
                     strcpy(array[i].nombre,auxNombre);
-                    array[i].edad=auxEdad;
+                    array[i].edad = auxEdad;
                     array[i].isEmpty = 0;
                 }
             }
@@ -84,7 +72,7 @@ int personas_alta(EPersonas* array,int limite)
     return retorno;
 }
 
-int personas_baja(EPersonas* array,int limite, char[50] auxPersona)
+int personas_baja(EPersonas* array, int limite, char nombre[50])
 {
     int retorno = -1;
     int i;
@@ -93,7 +81,7 @@ int personas_baja(EPersonas* array,int limite, char[50] auxPersona)
         retorno = -2;
         for(i=0;i<limite;i++)
         {
-            if(!array[i].isEmpty && strcmp(array[i].nombre,auxPersona)==0)
+            if(!array[i].isEmpty && (strcmp(array[i].nombre,nombre)==0))
             {
                 array[i].isEmpty = 1;
                 retorno = 0;
@@ -148,6 +136,34 @@ int buscarLugarLibre(EPersonas* array,int limite)
                 break;
             }
         }
+    }
+    return retorno;
+}
+
+int personas_grafico(EPersonas* array, int limite)
+{
+    int retorno=-1;
+    int i;
+    if(limite>0)
+    {
+        retorno=0;
+        for (i=0;i<limite; i++)
+        {
+            if(array[i].edad<18)
+            {
+                printf(" *");
+
+            }
+            else if(array[i].edad>19 && array[i].edad<35)
+            {
+                printf("       *");
+            }
+            else
+            {
+                printf("       *\n");
+            }
+        }
+        printf("\n<18    19-35    >35");
     }
     return retorno;
 }

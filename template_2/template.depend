@@ -55,7 +55,7 @@
 
 1524705120 d:\template_2\pantalla.h
 
-1525130568 source:d:\programacion1-laboratorio1\template_2\main.c
+1525209701 source:d:\programacion1-laboratorio1\template_2\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -64,18 +64,18 @@
 	"utn.h"
 	"contratacion.h"
 
-1525125589 d:\programacion1-laboratorio1\template_2\pantalla.h
+1525209701 d:\programacion1-laboratorio1\template_2\pantalla.h
 
-1525125589 d:\programacion1-laboratorio1\template_2\utn.h
+1525209701 d:\programacion1-laboratorio1\template_2\utn.h
 
-1525125589 source:d:\programacion1-laboratorio1\template_2\utn.c
+1525209701 source:d:\programacion1-laboratorio1\template_2\utn.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 	<string.h>
 	"utn.h"
 
-1525130519 source:d:\programacion1-laboratorio1\template_2\pantalla.c
+1525209701 source:d:\programacion1-laboratorio1\template_2\pantalla.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -92,7 +92,7 @@
 	"utn.h"
 	"pantalla.h"
 
-1525130539 d:\programacion1-laboratorio1\template_2\contratacion.h
+1525209701 d:\programacion1-laboratorio1\template_2\contratacion.h
 	"pantalla.h"
 
 1524792033 d:\programacion1-laboratorio1\template_2\pantalla.c
