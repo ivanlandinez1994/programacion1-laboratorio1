@@ -6,45 +6,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "tp.h"
+#include "trabajoPractico.h"
+#include "utn.h"
 #define ARRAY_SIZE 5
 
 int main()
 {
     EPersonas personas[ARRAY_SIZE];
+    personas_init(personas, ARRAY_SIZE);
     int opcion;
-    int i;
-    for(i=0; i<ARRAY_SIZE; i++){
-        personas[i].flagEstadoVacio=1;
-    }
-    while(opcion!=5)
+    char auxPersona[50];
+    getValidInt("\n1.Agregar persona\n2.Borrar persona\n3.Imprimir ordenado por nombre\n4.imprimir grafico edades\n5.salir","ingrese una opcion correcta",&opcion,1,5,3);
+    do
     {
-        printf("\n1- Agregar persona\n");
-        printf("2- Borrar persona\n");
-        printf("3- Imprimir lista ordenada por  nombre\n");
-        printf("4- Imprimir grafico de edades\n");
-        printf("5- Salir\n");
-        fflush(stdin);
-        scanf("%d", &opcion);
-        while(opcion>5 || opcion<=0)
-        {
-            printf("ingrese una opcion valida\n1- Agregar persona\n");
-            printf("2- Borrar persona\n");
-            printf("3- Imprimir lista ordenada por  nombre\n");
-            printf("4- Imprimir grafico de edades\n");
-            printf("5- Salir\n");
-            fflush(stdin);
-            scanf("%d", &opcion);
-        }
         switch(opcion)
         {
             case 1:
                 system("cls");
-                cargarDatosPersonas(personas, ARRAY_SIZE);
+                personas_alta(personas, ARRAY_SIZE);
                 break;
             case 2:
                 system("cls");
-                borrarDatosPersonas(personas, ARRAY_SIZE);
+                getValidString("ingrese el nombre de la persona a borrar","nombre no encontrado","maximo 50",auxPersona,50,3);
+                personas_baja(personas, ARRAY_SIZE,auxPersona);
                 break;
             case 3:
                 system("cls");
@@ -52,7 +36,6 @@ int main()
                 sort_mostrarArrayOrdenadoNombreEdad(personas, ARRAY_SIZE);
                 break;
             case 4:
-
                 system("cls");
                 break;
             case 5:

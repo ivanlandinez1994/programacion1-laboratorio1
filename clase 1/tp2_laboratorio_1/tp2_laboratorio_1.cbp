@@ -38,6 +38,14 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="tp.h" />
+		<Unit filename="trabajoPractico.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="trabajoPractico.h" />
+		<Unit filename="utn.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="utn.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

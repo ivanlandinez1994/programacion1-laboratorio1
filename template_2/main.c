@@ -8,9 +8,6 @@
 #define sizeArrayPantalla 100
 #define sizeArrayContrataciones 1000
 
-
-
-
 int main()
 {
     Pantalla array[sizeArrayPantalla];
@@ -23,7 +20,8 @@ int main()
 
     do
     {
-        getValidInt("1.Alta\n2.Baja\n3.Modificar\n4.Mostrar\n5.Ordenar\n6.Mostrar Debug\n9.Salir\n","\nNo valida\n",&menu,1,9,1);
+        getValidInt("1.Alta Pantallas\n2.Baja Pantallas \n3.Modificar Pantallas \n4.Mostrar Pantallas\n5.Ordenar Pantallas\n6.Mostrar Debug\n7.Contratar Publicidad"
+                "\n8.Baja publicidad\n9.Modificar Publicidad\n10.Mostrar Contrataciones\n11.mostrar debug contrataciones\n12.Salir\n","\nNo valida\n",&menu,1,11,1);
         switch(menu)
         {
             case 1:
@@ -46,9 +44,24 @@ int main()
             case 6:
                 pantalla_mostrarDebug(array,sizeArrayPantalla);
                 break;
+            case 7:
+                contratacion_alta(arrayContrataciones,sizeArrayContrataciones,array, sizeArrayPantalla);
+                break;
+            case 8:
+                contratacion_baja(arrayContrataciones,sizeArrayContrataciones);
+                break;
+            case 9:
+                contratacion_modificacion(arrayContrataciones, sizeArrayContrataciones);
+                break;
+            case 10:
+                contratacion_mostrar(arrayContrataciones, sizeArrayContrataciones, array,sizeArrayPantalla);
+                break;
+            case 11:
+                contratacion_mostrarDebug(arrayContrataciones, sizeArrayContrataciones);
+                break;
         }
 
-    }while(menu != 9);
+    }while(menu != 12);
 
     return 0;
 }
