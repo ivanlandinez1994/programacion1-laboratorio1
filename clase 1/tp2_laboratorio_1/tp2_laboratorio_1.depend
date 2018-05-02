@@ -30,16 +30,16 @@
 
 1525209701 d:\programacion1-laboratorio1\clase 1\tp2_laboratorio_1\utn.h
 
-1525215334 source:d:\programacion1-laboratorio1\clase 1\tp2_laboratorio_1\main.c
+1525219973 source:d:\programacion1-laboratorio1\clase 1\tp2_laboratorio_1\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"utn.h"
 	"trabajoPractico.h"
 
-1525214404 d:\programacion1-laboratorio1\clase 1\tp2_laboratorio_1\trabajopractico.h
+1525219886 d:\programacion1-laboratorio1\clase 1\tp2_laboratorio_1\trabajopractico.h
 
-1525216222 source:d:\programacion1-laboratorio1\clase 1\tp2_laboratorio_1\trabajopractico.c
+1525219886 source:d:\programacion1-laboratorio1\clase 1\tp2_laboratorio_1\trabajopractico.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>

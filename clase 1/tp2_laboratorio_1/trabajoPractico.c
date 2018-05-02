@@ -31,7 +31,7 @@ int personas_mostrar(EPersonas* array,int limite)
         for(i=0;i<limite;i++)
         {
             if(!array[i].isEmpty)
-                printf("Nombre: %s\nEdad: %d\n",array[i].nombre, array[i].edad);
+                printf("\nNombre: %s\nEdad: %d\nDni: %d\n",array[i].nombre, array[i].edad, array[i].dni);
         }
     }
     return retorno;
@@ -42,6 +42,7 @@ int personas_alta(EPersonas* array,int limite)
     int retorno = -1;
     char auxNombre[50];
     int auxEdad;
+    int auxDni;
     int i;
     if(limite > 0 && array != NULL)
     {
@@ -52,10 +53,14 @@ int personas_alta(EPersonas* array,int limite)
             {
                 if(!getValidInt("\nEdad?","\neso no es una edad",&auxEdad,1,150,2))
                 {
-                    retorno = 0;
-                    strcpy(array[i].nombre,auxNombre);
-                    array[i].edad = auxEdad;
-                    array[i].isEmpty = 0;
+                    if(!getValidInt("\nDni?","\neso no es un dni",&auxDni,100000,99999999,2))
+                    {
+                        retorno = 0;
+                        strcpy(array[i].nombre,auxNombre);
+                        array[i].edad = auxEdad;
+                        array[i].dni = auxDni;
+                        array[i].isEmpty = 0;
+                    }
                 }
             }
             else
@@ -72,7 +77,7 @@ int personas_alta(EPersonas* array,int limite)
     return retorno;
 }
 
-int personas_baja(EPersonas* array, int limite, char nombre[50])
+int personas_baja(EPersonas* array, int limite, int dni)
 {
     int retorno = -1;
     int i;
@@ -81,7 +86,7 @@ int personas_baja(EPersonas* array, int limite, char nombre[50])
         retorno = -2;
         for(i=0;i<limite;i++)
         {
-            if(!array[i].isEmpty && (strcmp(array[i].nombre,nombre)==0))
+            if(!array[i].isEmpty && array[i].dni==dni)
             {
                 array[i].isEmpty = 1;
                 retorno = 0;

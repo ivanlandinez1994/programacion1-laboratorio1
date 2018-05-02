@@ -14,7 +14,7 @@ int main()
     EPersonas arrayPersonas[ARRAY_SIZE];
     personas_init(arrayPersonas, ARRAY_SIZE);
     int opcion;
-    char auxNombreMain[50];
+    int auxDni;
     int sentidoOrdenArray;
     do
     {
@@ -27,8 +27,10 @@ int main()
                 break;
             case 2:
                 system("cls");
-                getValidString("\ningrese el nombre de la persona a borrar: ","\nnombre no encontrado","\nmaximo 50",auxNombreMain,50,3);
-                personas_baja(arrayPersonas, ARRAY_SIZE, auxNombreMain);
+                if(!getValidInt("\ningrese el dni de la persona que desea borrar: ","\ndni incorrecto",&auxDni,100000,99999999,3))
+                personas_baja(arrayPersonas, ARRAY_SIZE, auxDni);
+                else
+                printf("no hay ninguna persona con ese dni");
                 break;
             case 3:
                 system("cls");
