@@ -5,6 +5,7 @@
 #include "pantalla.h"
 #include "utn.h"
 #include "contratacion.h"
+#include "informes.h"
 #define sizeArrayPantalla 100
 #define sizeArrayContrataciones 1000
 
@@ -18,10 +19,26 @@ int main()
     pantalla_init(array,sizeArrayPantalla);
     contratacion_init(arrayContrataciones, sizeArrayContrataciones);
 
+    pantalla_altaForzada(array,sizeArrayPantalla,"Wilde","Las Flores 50",50,0);
+    pantalla_altaForzada(array,sizeArrayPantalla,"Avellaneda","Belgrano 250",2000,0);
+    pantalla_altaForzada(array,sizeArrayPantalla,"Bernal","Cerrito 300",3000,0);
+    pantalla_altaForzada(array,sizeArrayPantalla,"Quilmes","Lavalle 450",1000,1);
+    pantalla_altaForzada(array,sizeArrayPantalla,"Berazategui","Mitre 150",5000,1);
+
+    cont_altaForzada(arrayContrataciones,sizeArrayContrataciones,array,sizeArrayPantalla,0,"video.avi",20911911915,100);
+    cont_altaForzada(arrayContrataciones,sizeArrayContrataciones,array,sizeArrayPantalla,0,"video1.avi",20911911915,400);
+    cont_altaForzada(arrayContrataciones,sizeArrayContrataciones,array,sizeArrayPantalla,0,"video2.avi",30911911915,300);
+    cont_altaForzada(arrayContrataciones,sizeArrayContrataciones,array,sizeArrayPantalla,2,"video3.avi",30911911915,400);
+    cont_altaForzada(arrayContrataciones,sizeArrayContrataciones,array,sizeArrayPantalla,2,"video4.avi",40911911915,500);
+    cont_altaForzada(arrayContrataciones,sizeArrayContrataciones,array,sizeArrayPantalla,2,"video5.avi",40911911915,600);
+
+    informar_ConsultaFacturacion(arrayContrataciones,sizeArrayContrataciones,array,sizeArrayPantalla,20911911915);
+    informar_ListarContrataciones(arrayContrataciones,sizeArrayContrataciones,array,sizeArrayPantalla);
+
     do
     {
         getValidInt("1.Alta Pantallas\n2.Baja Pantallas \n3.Modificar Pantallas \n4.Mostrar Pantallas\n5.Ordenar Pantallas\n6.Mostrar Debug\n7.Contratar Publicidad"
-                "\n8.Baja publicidad\n9.Modificar Publicidad\n10.Mostrar Contrataciones\n11.mostrar debug contrataciones\n12.Salir\n","\nNo valida\n",&menu,1,11,1);
+                "\n8.Baja publicidad\n9.Modificar Publicidad\n10.Mostrar Contrataciones\n11.mostrar debug contrataciones\n12.Salir\n","\nNo valida\n",&menu,1,12,1);
         switch(menu)
         {
             case 1:

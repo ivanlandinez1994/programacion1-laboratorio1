@@ -8,11 +8,7 @@
 
 static int contratacion_buscarPorId(Contratacion* array, int limite, int id);
 static int contratacion_proximoId();
-/** \brief
- * \param array Contratacion*
- * \param limite int
- * \return int
- */
+
 int contratacion_init(Contratacion* array,int limite)
 {
     int retorno = -1;
@@ -77,7 +73,7 @@ int contratacion_alta(Contratacion* arrayContratacion,int limite, Pantalla* arra
         }
     }
 
-    if(limite > 0 && arrayContratacion != NULL)
+    if((limite > 0 && arrayContratacion != NULL) && (limitePantallas > 0 && arrayPantalla != NULL))
     {
         i = buscarLugarLibre(arrayContratacion,limite);
         if(i >= 0)
@@ -117,7 +113,6 @@ int contratacion_alta(Contratacion* arrayContratacion,int limite, Pantalla* arra
     return retorno;
 }
 
-
 int contratacion_baja(Contratacion* arrayContratacion,int limite)
 {
     int retorno = -1;
@@ -153,12 +148,6 @@ int contratacion_baja(Contratacion* arrayContratacion,int limite)
     return retorno;
 }
 
-/** \brief
- * \param array Contratacion*
- * \param limite int
- * \param id int
- * \return int
- */
 int contratacion_modificacion(Contratacion* arrayContratacion,int limiteContratacion)
 {
     int retorno = -1;
@@ -251,4 +240,34 @@ int contratacion_proximoId()
     static int proximoId = -1;
     proximoId++;
     return proximoId;
+}
+
+int cont_altaForzada(Contratacion* arrayC,int limite,
+              Pantalla* pantallas, int lenPantallas,
+              int idPantalla,char* archivo,float cuit,int dias)
+{
+    int retorno = -1;
+    int i;
+    int posPant;
+    if(limite > 0 && arrayC != NULL)
+    {
+        i = buscarLugarLibre(arrayC,limite);
+        if(i >= 0)
+        {
+
+            posPant = pantalla_buscarPorId(pantallas,lenPantallas,idPantalla);
+            if(posPant>=0)
+            {
+                arrayC[i].dias = dias;
+                arrayC[i].cuit=cuit;
+                strcpy(arrayC[i].archivo,archivo);
+                //TODO
+                arrayC[i].idPantalla = idPantalla; // relacion
+                arrayC[i].isEmpty=0;
+                arrayC[i].idContratacion = contratacion_proximoId();
+            }
+        }
+        retorno = 0;
+    }
+    return retorno;
 }

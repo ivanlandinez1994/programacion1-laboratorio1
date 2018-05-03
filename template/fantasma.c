@@ -225,3 +225,28 @@ int proximoId()
     proximoId++;
     return proximoId;
 }
+
+int fantasma_altaForzada(Fantasma* array,int limite,char* nombre, int id)
+{
+    int retorno = -1;
+    int i;
+
+    if(limite > 0 && array != NULL)
+    {
+        i = buscarLugarLibre(array,limite);
+        if(i >= 0)
+        {
+            retorno = 0;
+            strcpy(array[i].nombre,nombre);
+            strcpy(array[i].direccion,direccion);
+            array[i].precio = precio;
+            array[i].tipo = tipo;
+            //------------------------------
+            //------------------------------
+            array[i].idPantalla = proximoId();
+            array[i].isEmpty = 0;
+        }
+        retorno = 0;
+    }
+    return retorno;
+}

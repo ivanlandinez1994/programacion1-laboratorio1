@@ -55,27 +55,32 @@
 
 1524705120 d:\template_2\pantalla.h
 
-1525209701 source:d:\programacion1-laboratorio1\template_2\main.c
+1524791004 source:d:\labo1\clase11\contratacion.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"Contratacion.h"
+	"utn.h"
+	"Pantalla.h"
+
+1524791015 d:\labo1\clase11\contratacion.h
+	"pantalla.h"
+
+1524791070 d:\labo1\clase11\pantalla.h
+
+1524691840 d:\labo1\clase11\utn.h
+
+1524791042 source:d:\labo1\clase11\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 	<string.h>
 	"pantalla.h"
 	"utn.h"
-	"contratacion.h"
+	"Contratacion.h"
 
-1525209701 d:\programacion1-laboratorio1\template_2\pantalla.h
-
-1525209701 d:\programacion1-laboratorio1\template_2\utn.h
-
-1525209701 source:d:\programacion1-laboratorio1\template_2\utn.c
-	<stdio.h>
-	<stdlib.h>
-	<time.h>
-	<string.h>
-	"utn.h"
-
-1525209701 source:d:\programacion1-laboratorio1\template_2\pantalla.c
+1524791107 source:d:\labo1\clase11\pantalla.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -83,19 +88,48 @@
 	"pantalla.h"
 	"utn.h"
 
-1525131021 source:d:\programacion1-laboratorio1\template_2\contratacion.c
+1524691840 source:d:\labo1\clase11\utn.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 	<string.h>
-	"contratacion.h"
 	"utn.h"
+
+1525299466 source:d:\clase12\contratacion.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"Contratacion.h"
+	"utn.h"
+	"Pantalla.h"
+
+1525299130 d:\clase12\contratacion.h
 	"pantalla.h"
 
-1525209701 d:\programacion1-laboratorio1\template_2\contratacion.h
-	"pantalla.h"
+1525298482 d:\clase12\pantalla.h
 
-1524792033 d:\programacion1-laboratorio1\template_2\pantalla.c
+1524691840 d:\clase12\utn.h
+
+1524691840 source:d:\clase12\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1525298142 source:d:\clase12\informar.c
+
+1525301272 source:d:\clase12\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+	"Contratacion.h"
+
+1525298482 source:d:\clase12\pantalla.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>

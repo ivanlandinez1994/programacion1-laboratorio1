@@ -18,6 +18,9 @@ int contratacion_baja(Contratacion* arrayContratacion,int limite);
 int contratacion_modificacion(Contratacion* arrayContratacion,int limite);
 int contratacion_ordenar(Contratacion* array,int limite, int orden);
 int buscarLugarLibre(Contratacion* array,int limite);
+
+int cont_altaForzada(Contratacion* arrayC,int limite,
+                     Pantalla* pantallas, int lenPantallas,int idPantalla,char* archivo,float cuit,int dias);
 #endif // FANTASMA_H_INCLUDED
 
 

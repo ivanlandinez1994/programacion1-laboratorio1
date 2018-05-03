@@ -1,0 +1,159 @@
+# depslib dependency file v1.0
+1524699666 source:d:\template\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"fantasma.h"
+	"utn.h"
+
+1524691839 source:d:\template\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1524691839 d:\template\utn.h
+
+1524700062 source:d:\template\fantasma.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"fantasma.h"
+	"utn.h"
+
+1524700062 d:\template\fantasma.h
+
+1524705693 source:d:\template_2\pantalla.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+
+1524700062 d:\template_2\fantasma.h
+
+1524691839 d:\template_2\utn.h
+
+1524691839 source:d:\template_2\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1524704878 source:d:\template_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+
+1524705120 d:\template_2\pantalla.h
+
+1525209701 source:d:\programacion1-laboratorio1\template_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+	"contratacion.h"
+
+1525209701 d:\programacion1-laboratorio1\template_2\pantalla.h
+
+1525209701 d:\programacion1-laboratorio1\template_2\utn.h
+
+1525209701 source:d:\programacion1-laboratorio1\template_2\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1525209701 source:d:\programacion1-laboratorio1\template_2\pantalla.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+
+1525131021 source:d:\programacion1-laboratorio1\template_2\contratacion.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"contratacion.h"
+	"utn.h"
+	"pantalla.h"
+
+1525209701 d:\programacion1-laboratorio1\template_2\contratacion.h
+	"pantalla.h"
+
+1524792033 d:\programacion1-laboratorio1\template_2\pantalla.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+
+1525306581 source:d:\programacion1-laboratorio1\parcialpantallascontratacion\pantalla.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+	"contratacion.h"
+
+1525303379 d:\programacion1-laboratorio1\parcialpantallascontratacion\pantalla.h
+
+1525297332 d:\programacion1-laboratorio1\parcialpantallascontratacion\utn.h
+
+1525297332 source:d:\programacion1-laboratorio1\parcialpantallascontratacion\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1525304005 source:d:\programacion1-laboratorio1\parcialpantallascontratacion\contratacion.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"contratacion.h"
+	"utn.h"
+	"pantalla.h"
+
+1525304005 d:\programacion1-laboratorio1\parcialpantallascontratacion\contratacion.h
+	"pantalla.h"
+
+1525304421 source:d:\programacion1-laboratorio1\parcialpantallascontratacion\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+	"contratacion.h"
+	"informes.h"
+
+1525304342 source:d:\programacion1-laboratorio1\parcialpantallascontratacion\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"contratacion.h"
+	"utn.h"
+	"pantalla.h"
+	"informes.h"
+
+1525306493 d:\programacion1-laboratorio1\parcialpantallascontratacion\informes.h
+
