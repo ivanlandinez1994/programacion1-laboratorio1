@@ -137,3 +137,52 @@
 	"pantalla.h"
 	"utn.h"
 
+1525385436 source:d:\programacion1-laboratorio1\parcialhechoprofesor\contratacion.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"Contratacion.h"
+	"utn.h"
+	"Pantalla.h"
+
+1525385436 d:\programacion1-laboratorio1\parcialhechoprofesor\contratacion.h
+	"pantalla.h"
+
+1525385436 d:\programacion1-laboratorio1\parcialhechoprofesor\pantalla.h
+
+1525385436 d:\programacion1-laboratorio1\parcialhechoprofesor\utn.h
+
+1525385436 source:d:\programacion1-laboratorio1\parcialhechoprofesor\informar.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"Contratacion.h"
+	"utn.h"
+	"Pantalla.h"
+
+1525385436 source:d:\programacion1-laboratorio1\parcialhechoprofesor\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+	"Contratacion.h"
+
+1525385436 source:d:\programacion1-laboratorio1\parcialhechoprofesor\pantalla.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantalla.h"
+	"utn.h"
+
+1525385436 source:d:\programacion1-laboratorio1\parcialhechoprofesor\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+

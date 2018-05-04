@@ -1,0 +1,95 @@
+# depslib dependency file v1.0
+1524699666 source:d:\template\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"fantasma.h"
+	"utn.h"
+
+1524691839 source:d:\template\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1524691839 d:\template\utn.h
+
+1524700062 source:d:\template\fantasma.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"fantasma.h"
+	"utn.h"
+
+1524700062 d:\template\fantasma.h
+
+1524700064 source:d:\programacion1-laboratorio1\template\fantasma.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"fantasma.h"
+	"utn.h"
+
+1524789017 d:\programacion1-laboratorio1\template\fantasma.h
+
+1524779091 d:\programacion1-laboratorio1\template\utn.h
+
+1524779091 source:d:\programacion1-laboratorio1\template\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"fantasma.h"
+	"utn.h"
+
+1524779091 source:d:\programacion1-laboratorio1\template\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1525396351 source:d:\programacion1-laboratorio1\parcialpracticamercadolibre\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"usuario.h"
+	"publicacion.h"
+	"utn.h"
+
+1525396331 d:\programacion1-laboratorio1\parcialpracticamercadolibre\usuario.h
+
+1525396222 d:\programacion1-laboratorio1\parcialpracticamercadolibre\publicacion.h
+
+1525393847 d:\programacion1-laboratorio1\parcialpracticamercadolibre\utn.h
+
+1525396344 source:d:\programacion1-laboratorio1\parcialpracticamercadolibre\publicacion.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"publicacion.h"
+	"utn.h"
+	"usuario.h"
+
+1525396314 source:d:\programacion1-laboratorio1\parcialpracticamercadolibre\usuario.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"usuario.h"
+	"utn.h"
+	"publicacion.h"
+
+1525396525 source:d:\programacion1-laboratorio1\parcialpracticamercadolibre\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+

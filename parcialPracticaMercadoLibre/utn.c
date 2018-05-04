@@ -4,7 +4,6 @@
 #include <string.h>
 #include "utn.h"
 
-
 /**
  * \brief Solicita un número al usuario y devuelve el resultado
  * \param mensaje Es el mensaje a ser mostrado
