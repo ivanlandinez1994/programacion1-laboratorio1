@@ -2,18 +2,17 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-#include "fantasma.h"
+#include "usuario.h"
 #include "utn.h"
 
-static int buscarPorId(Fantasma* array, int limite, int id);
-static int buscarLugarLibre(Fantasma* array,int limite);
+static int buscarLugarLibre(Usuario* array,int limite);
 static int proximoId();
-/** \brief array Fantasma*
+/** \brief array Usuario*
  * \param limite int
  * \return int
  *
  */
-int fantasma_init(Fantasma* array,int limite)
+int usuario_init(Usuario* array,int limite)
 {
     int retorno = -1;
     int i;
@@ -28,7 +27,7 @@ int fantasma_init(Fantasma* array,int limite)
     return retorno;
 }
 
-int fantasma_mostrarDebug(Fantasma* array,int limite)
+int usuario_mostrarDebug(Usuario* array,int limite)
 {
     int retorno = -1;
     int i;
@@ -37,13 +36,13 @@ int fantasma_mostrarDebug(Fantasma* array,int limite)
         retorno = 0;
         for(i=0;i<limite;i++)
         {
-            printf("[DEBUG] - %d - %s - %d\n",array[i].idFantasma, array[i].nombre, array[i].isEmpty);
+            printf("[DEBUG] - %d - %s - %d\n",array[i].idUsuario, array[i].usuario, array[i].isEmpty);
         }
     }
     return retorno;
 }
 
-int fantasma_mostrar(Fantasma* array,int limite)
+int usuario_mostrar(Usuario* array,int limite)
 {
     int retorno = -1;
     int i;
@@ -53,28 +52,35 @@ int fantasma_mostrar(Fantasma* array,int limite)
         for(i=0;i<limite;i++)
         {
             if(!array[i].isEmpty)
-                printf("[RELEASE] - %d - %s - %d\n",array[i].idFantasma, array[i].nombre, array[i].isEmpty);
+                printf("Nombre usuario: %s\nCalificacion promedio: %d\n",array[i].usuario, array[i].calificacionesAcum/array[i].cantidadVentas);
         }
     }
     return retorno;
 }
 
-int fantasma_alta(Fantasma* array,int limite)
+int usuario_alta(Usuario* array,int limite)
 {
     int retorno = -1;
     int i;
-    char buffer[50];
+    char usuario[50];
+    char password[20];
+
     if(limite > 0 && array != NULL)
     {
         i = buscarLugarLibre(array,limite);
         if(i >= 0)
         {
-            if(!getValidString("\nNombre? ","\nEso no es un nombre","El maximo es 40",buffer,40,2))
+            if(!getValidString("\nNombre? ","\nEso no es un usuario","El maximo es 40",usuario,40,2))
             {
-                retorno = 0;
-                strcpy(array[i].nombre,buffer);
-                array[i].idFantasma = proximoId();
-                array[i].isEmpty = 0;
+                if(!getValidAlfaNumerico("\nContraseña? ","\nEso no es una contraseña","El maximo es 20",password,20,2))
+                {
+                    retorno = 0;
+                    strcpy(array[i].usuario,usuario);
+                    strcpy(array[i].password,password);
+                    array[i].idUsuario = proximoId();
+                    array[i].isEmpty = 0;
+                    printf("usuario dado de alta: \nUsuario: %s\nID Usuario: %d\n\n", array[i].usuario, array[i].idUsuario);
+                }
             }
             else
             {
@@ -90,40 +96,45 @@ int fantasma_alta(Fantasma* array,int limite)
     return retorno;
 }
 
-
-int fantasma_baja(Fantasma* array,int limite, int id)
+int usuario_baja(Usuario* array,int limite, int idUsuario)
 {
     int retorno = -1;
     int indiceAEliminar;
-    indiceAEliminar = buscarPorId(array, limite, id);
+    indiceAEliminar = usuario_buscarPorId(array, limite, idUsuario);
     if(indiceAEliminar>0)
     {
         retorno = 0;
         array[indiceAEliminar].isEmpty = 1;
+        printf("usuario dado de baja\n");
     }
     return retorno;
 }
 
 /** \brief
  *
- * \param array Fantasma*
+ * \param array Usuario*
  * \param limite int
  * \param id int
  * \return int
  *
  */
-int fantasma_modificacion(Fantasma* array,int limite, int id)
+int usuario_modificacion(Usuario* array,int limite, int idUsuario)
 {
     int retorno = -1;
     int indiceAModificar;
-    char buffer[50];
-    indiceAModificar = buscarPorId(array, limite, id);
+    char usuario[50];
+    char password[20];
+    indiceAModificar = usuario_buscarPorId(array, limite, idUsuario);
     if(indiceAModificar>0)
     {
-        if(!getValidString("\nNombre? ","\nEso no es un nombre","El maximo es 40",buffer,40,2))
+        if(!getValidString("\nNuevo Usuario? ","\nEso no es un usuario","El maximo es 50",usuario,50,2))
         {
-            retorno = 0;
-            strcpy(array[indiceAModificar].nombre,buffer);
+            if(!getValidAlfaNumerico("\nNueva contraseña? ","\nEso no es u ana contraseña","\nEl maximo es 20",password,20,2))
+            {
+                retorno = 0;
+                strcpy(array[indiceAModificar].usuario,usuario);
+                strcpy(array[indiceAModificar].password,password);
+            }
         }
         else
         {
@@ -134,12 +145,12 @@ int fantasma_modificacion(Fantasma* array,int limite, int id)
     return retorno;
 }
 
-int fantasma_ordenarChar(Fantasma* array,int limite, int orden)
+int usuario_ordenar(Usuario* array,int limite, int orden)
 {
     int retorno = -1;
     int i;
     int flagSwap;
-    Fantasma auxiliarEstructura;
+    Usuario auxiliarEstructura;
 
     if(limite > 0 && array != NULL)
     {
@@ -150,7 +161,7 @@ int fantasma_ordenarChar(Fantasma* array,int limite, int orden)
             {
                 if(!array[i].isEmpty && !array[i+1].isEmpty)
                 {
-                    if((strcmp(array[i].nombre,array[i+1].nombre) > 0 && orden) || (strcmp(array[i].nombre,array[i+1].nombre) < 0 && !orden)) //******
+                    if((strcmp(array[i].usuario,array[i+1].usuario) > 0 && orden) || (strcmp(array[i].usuario,array[i+1].usuario) < 0 && !orden)) //******
                     {
                         auxiliarEstructura = array[i];
                         array[i] = array[i+1];
@@ -164,33 +175,7 @@ int fantasma_ordenarChar(Fantasma* array,int limite, int orden)
     return retorno;
 }
 
-int fantasma_ordenarNumericamente(Fantasma* array,int limite, int orden)
-{
-    int retorno = -1;
-    int flagSwap;
-    int i;
-    char AuxiliarNombre[50];
-    if(limite > 0)
-    {
-        retorno = 0;
-        do
-        {
-            flagSwap = 0;
-            for(i=0;i<limite-1;i++)
-            {
-                if((array[i].idFantasma < array[i+1].idFantasma && orden)||(array[i].idFantasma > array[i+1].idFantasma && !orden))
-                {
-                    strcpy(AuxiliarNombre,array[i+1].nombre);
-                    strcpy(array[i+1].nombre,array [i].nombre);
-                    strcpy(array[i].nombre,AuxiliarNombre);
-                }
-            }
-        }while(flagSwap);
-    }
-    return retorno;
-}
-
-int buscarLugarLibre(Fantasma* array,int limite)
+int buscarLugarLibre(Usuario* array,int limite)
 {
     int retorno = -1;
     int i;
@@ -207,7 +192,7 @@ int buscarLugarLibre(Fantasma* array,int limite)
     }
     return retorno;
 }
-static int buscarPorId(Fantasma* array, int limite, int id)
+int usuario_buscarPorId(Usuario* array, int limite, int id)
 {
     int retorno = -1;
     int i;
@@ -216,7 +201,7 @@ static int buscarPorId(Fantasma* array, int limite, int id)
         retorno = -2;
         for(i=0;i<limite;i++)
         {
-            if(!array[i].isEmpty && array[i].idFantasma==id)
+            if(!array[i].isEmpty && array[i].idUsuario==id)
             {
                 retorno = i;
                 break;
@@ -226,14 +211,14 @@ static int buscarPorId(Fantasma* array, int limite, int id)
     return retorno;
 }
 
-int proximoId()
+static int proximoId()
 {
     static int proximoId = -1;
     proximoId++;
     return proximoId;
 }
 
-int fantasma_altaForzada(Fantasma* array,int limite,char* nombre, int id)
+int usuario_altaForzada(Usuario* array,int limite,char* usuario, int idUsuario)
 {
     int retorno = -1;
     int i;
@@ -244,8 +229,8 @@ int fantasma_altaForzada(Fantasma* array,int limite,char* nombre, int id)
         if(i >= 0)
         {
             retorno = 0;
-            strcpy(array[i].nombre,nombre);
-            array[i].idFantasma = proximoId();
+            strcpy(array[i].usuario,usuario);
+            array[i].idUsuario = proximoId();
             array[i].isEmpty = 0;
         }
         retorno = 0;

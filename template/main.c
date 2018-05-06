@@ -4,40 +4,46 @@
 #include <string.h>
 #include "fantasma.h"
 #include "utn.h"
-#define SIZE 10
+#define SIZEFANTASMA 10
 
 int main()
 {
-    Fantasma array[SIZE];
+    Fantasma arrayFantasma[SIZEFANTASMA];
 
     int menu;
     int auxiliarId;
 
-    fantasma_init(array,SIZE);
+    fantasma_init(arrayFantasma,SIZEFANTASMA);
+
+    fantasma_altaForzada(arrayFantasma,SIZEFANTASMA,"Pedro",123456);
+    fantasma_altaForzada(arrayFantasma,SIZEFANTASMA,"Adrian",123456);
+    fantasma_altaForzada(arrayFantasma,SIZEFANTASMA,"Walter",123456);
+    fantasma_altaForzada(arrayFantasma,SIZEFANTASMA,"Liliana",123456);
+
     do
     {
         getValidInt("1.Alta\n2.Baja\n3.Modificar\n4.Mostrar\n5.Ordenar\n6.Mostrar Debug\n9.Salir\n","\nNo valida\n",&menu,1,9,1);
         switch(menu)
         {
             case 1:
-                fantasma_alta(array,SIZE);
+                fantasma_alta(arrayFantasma,SIZEFANTASMA);
                 break;
             case 2:
                 getValidInt("ID?","\nNumero valida\n",&auxiliarId,0,200,2);
-                fantasma_baja(array,SIZE,auxiliarId);
+                fantasma_baja(arrayFantasma,SIZEFANTASMA,auxiliarId);
                 break;
             case 3:
                 getValidInt("ID?","\nNumero valida\n",&auxiliarId,0,200,2);
-                fantasma_modificacion(array,SIZE,auxiliarId);
+                fantasma_modificacion(arrayFantasma,SIZEFANTASMA,auxiliarId);
                 break;
             case 4:
-                fantasma_mostrar(array,SIZE);
+                fantasma_mostrar(arrayFantasma,SIZEFANTASMA);
                 break;
             case 5:
-                fantasma_ordenar(array,SIZE,1);
+                fantasma_ordenarChar(arrayFantasma,SIZEFANTASMA,1);
                 break;
             case 6:
-                fantasma_mostrarDebug(array,SIZE);
+                fantasma_mostrarDebug(arrayFantasma,SIZEFANTASMA);
                 break;
         }
 

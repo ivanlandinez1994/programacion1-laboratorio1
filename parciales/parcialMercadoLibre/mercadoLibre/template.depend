@@ -1,0 +1,131 @@
+# depslib dependency file v1.0
+1524699666 source:d:\template\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"fantasma.h"
+	"utn.h"
+
+1524691839 source:d:\template\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1524691839 d:\template\utn.h
+
+1524700062 source:d:\template\fantasma.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"fantasma.h"
+	"utn.h"
+
+1524700062 d:\template\fantasma.h
+
+1525632760 source:d:\programacion1-laboratorio1\template\fantasma.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"fantasma.h"
+	"utn.h"
+
+1525632620 d:\programacion1-laboratorio1\template\fantasma.h
+
+1525631470 d:\programacion1-laboratorio1\template\utn.h
+
+1525631470 source:d:\programacion1-laboratorio1\template\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"fantasma.h"
+	"utn.h"
+
+1525631470 source:d:\programacion1-laboratorio1\template\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1525633237 source:d:\programacion1-laboratorio1\mercadolibre\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"fantasma.h"
+	"utn.h"
+
+1525631470 d:\programacion1-laboratorio1\mercadolibre\utn.h
+
+1525631470 source:d:\programacion1-laboratorio1\mercadolibre\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1525636006 source:d:\programacion1-laboratorio1\mercadolibre\publicacion.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"publicacion.h"
+	"utn.h"
+
+1525636006 d:\programacion1-laboratorio1\mercadolibre\publicacion.h
+
+1525636006 source:d:\programacion1-laboratorio1\mercadolibre\usuario.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"usuario.h"
+	"utn.h"
+
+1525636006 d:\programacion1-laboratorio1\mercadolibre\usuario.h
+
+1525648836 source:d:\mercadolibre\publicacion.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"publicacion.h"
+	"utn.h"
+
+1525648451 d:\mercadolibre\publicacion.h
+	"usuario.h"
+
+1525631470 d:\mercadolibre\utn.h
+
+1525648836 source:d:\mercadolibre\usuario.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"usuario.h"
+	"utn.h"
+
+1525648836 d:\mercadolibre\usuario.h
+
+1525631470 source:d:\mercadolibre\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1525648861 source:d:\mercadolibre\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"usuario.h"
+	"utn.h"
+	"publicacion.h"
+

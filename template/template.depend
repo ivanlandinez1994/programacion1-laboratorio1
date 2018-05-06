@@ -26,7 +26,7 @@
 
 1524700062 d:\template\fantasma.h
 
-1524700064 source:d:\programacion1-laboratorio1\template\fantasma.c
+1525637001 source:d:\programacion1-laboratorio1\template\fantasma.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -34,11 +34,11 @@
 	"fantasma.h"
 	"utn.h"
 
-1524789017 d:\programacion1-laboratorio1\template\fantasma.h
+1525636695 d:\programacion1-laboratorio1\template\fantasma.h
 
-1524779091 d:\programacion1-laboratorio1\template\utn.h
+1525631470 d:\programacion1-laboratorio1\template\utn.h
 
-1524779091 source:d:\programacion1-laboratorio1\template\main.c
+1525633237 source:d:\programacion1-laboratorio1\template\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -46,7 +46,7 @@
 	"fantasma.h"
 	"utn.h"
 
-1524779091 source:d:\programacion1-laboratorio1\template\utn.c
+1525631470 source:d:\programacion1-laboratorio1\template\utn.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
