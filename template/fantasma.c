@@ -8,9 +8,13 @@
 static int buscarPorId(Fantasma* array, int limite, int id);
 static int buscarLugarLibre(Fantasma* array,int limite);
 static int proximoId();
-/** \brief array Fantasma*
- * \param limite int
- * \return int
+
+
+/** \brief inicializa el array en vacio
+ *
+ * \param array Fantasma* el array a inicializar
+ * \param limite int el tamaño del array
+ * \return (0) esta todo inicializado en vacio (-1) no se inicializo
  *
  */
 int fantasma_init(Fantasma* array,int limite)
@@ -28,6 +32,13 @@ int fantasma_init(Fantasma* array,int limite)
     return retorno;
 }
 
+/** \brief imprime informacion sobre el array
+ *
+ * \param array Fantasma* el array a inicializar
+ * \param limite int el tamaño del array
+ * \return (0) si imprime correctamente todo el array (-1) si no se logra imprimir
+ *
+ */
 int fantasma_mostrarDebug(Fantasma* array,int limite)
 {
     int retorno = -1;
@@ -43,6 +54,13 @@ int fantasma_mostrarDebug(Fantasma* array,int limite)
     return retorno;
 }
 
+/** \brief imprime informacion sobre el array
+ *
+ * \param array Fantasma* el array a inicializar
+ * \param limite int el tamaño del array
+ * \return (0) si imprime correctamente todo el array (-1) si no se logra imprimir
+ *
+ */
 int fantasma_mostrar(Fantasma* array,int limite)
 {
     int retorno = -1;
@@ -59,6 +77,13 @@ int fantasma_mostrar(Fantasma* array,int limite)
     return retorno;
 }
 
+/** \brief alta de los datos a utilizar
+ *
+ * \param array Fantasma* el array a inicializar
+ * \param limite int el tamaño del array
+ * \return (0) si el alta fue exitosa (-1) si no lo fue
+ *
+ */
 int fantasma_alta(Fantasma* array,int limite)
 {
     int retorno = -1;
@@ -91,6 +116,15 @@ int fantasma_alta(Fantasma* array,int limite)
 }
 
 
+
+/** \brief baja de los datos a utilizar
+ *
+ * \param array Fantasma* el array a dar de baja
+ * \param limite int el tamaño del array
+ * \param el id del lugar donde se quiere realizar la baja
+ * \return (0) si la baja fue exitosa (-1) si no lo fue
+ *
+ */
 int fantasma_baja(Fantasma* array,int limite, int id)
 {
     int retorno = -1;
@@ -104,12 +138,12 @@ int fantasma_baja(Fantasma* array,int limite, int id)
     return retorno;
 }
 
-/** \brief
+/** \brief modificacion de los datos a utilizar
  *
- * \param array Fantasma*
- * \param limite int
- * \param id int
- * \return int
+ * \param array Fantasma* el array a modificar
+ * \param limite int el tamaño del array
+ * \param el id del lugar donde se quiere realizar la modificacion
+ * \return (0) si la modificacion fue exitosa (-1) si no lo fue (-2) si se ingreso algo que no era un string
  *
  */
 int fantasma_modificacion(Fantasma* array,int limite, int id)
@@ -133,7 +167,14 @@ int fantasma_modificacion(Fantasma* array,int limite, int id)
     retorno = 0;
     return retorno;
 }
-
+/** \brief ordenamiento de datos de tipo char o string
+ *
+ * \param array Fantasma* el array a ordenar
+ * \param limite int el tamaño del array
+ * \param orden si es de mayor a menor o menor a mayor
+ * \return (0) si el ordenamiento fue exitoso (-1) si no lo fue
+ *
+ */
 int fantasma_ordenarChar(Fantasma* array,int limite, int orden)
 {
     int retorno = -1;
@@ -163,7 +204,14 @@ int fantasma_ordenarChar(Fantasma* array,int limite, int orden)
     }
     return retorno;
 }
-
+/** \brief ordenamiento de datos de tipo numerico
+ *
+ * \param array Fantasma* el array a ordenar
+ * \param limite int el tamaño del array
+ * \param orden si es de mayor a menor o menor a mayor
+ * \return (0) si el ordenamiento fue exitoso (-1) si no lo fue
+ *
+ */
 int fantasma_ordenarNumericamente(Fantasma* array,int limite, int orden)
 {
     int retorno = -1;
@@ -189,7 +237,13 @@ int fantasma_ordenarNumericamente(Fantasma* array,int limite, int orden)
     }
     return retorno;
 }
-
+/** \brief busca de un lugar libre en el array
+ *
+ * \param array Fantasma* el array donde se buscara el lugar libre
+ * \param limite int el tamaño del array
+ * \return devuelve el lugar libre
+ *
+ */
 int buscarLugarLibre(Fantasma* array,int limite)
 {
     int retorno = -1;
@@ -207,6 +261,14 @@ int buscarLugarLibre(Fantasma* array,int limite)
     }
     return retorno;
 }
+/** \brief busca dentro del array el valor que se le pasa como id
+ *
+ * \param array Fantasma* el array donde se buscara la coincidencia
+ * \param limite int el tamaño del array
+ * \param el lugar que deseamos encontrar
+ * \return devuelve la ubicacion del id
+ *
+ */
 static int buscarPorId(Fantasma* array, int limite, int id)
 {
     int retorno = -1;
@@ -225,7 +287,11 @@ static int buscarPorId(Fantasma* array, int limite, int id)
     }
     return retorno;
 }
-
+/** \brief genera un id unico
+ *
+ * \return el id
+ *
+ */
 int proximoId()
 {
     static int proximoId = -1;

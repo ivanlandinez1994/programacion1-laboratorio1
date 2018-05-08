@@ -1,0 +1,94 @@
+# depslib dependency file v1.0
+1524699666 source:d:\template\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"fantasma.h"
+	"utn.h"
+
+1524691839 source:d:\template\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1524691839 d:\template\utn.h
+
+1524700062 source:d:\template\fantasma.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"fantasma.h"
+	"utn.h"
+
+1524700062 d:\template\fantasma.h
+
+1525637001 source:d:\programacion1-laboratorio1\template\fantasma.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"fantasma.h"
+	"utn.h"
+
+1525636695 d:\programacion1-laboratorio1\template\fantasma.h
+
+1525631470 d:\programacion1-laboratorio1\template\utn.h
+
+1525633237 source:d:\programacion1-laboratorio1\template\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"fantasma.h"
+	"utn.h"
+
+1525631470 source:d:\programacion1-laboratorio1\template\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1525814455 source:d:\pantallas\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"utn.h"
+
+1525649213 d:\pantallas\utn.h
+
+1525815011 source:d:\pantallas\pantallas.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantallas.h"
+	"utn.h"
+
+1525742670 d:\pantallas\pantallas.h
+
+1525820982 source:d:\pantallas\publicidad.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantallas.h"
+	"publicidad.h"
+	"utn.h"
+
+1525820982 source:d:\pantallas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"pantallas.h"
+	"publicidad.h"
+	"utn.h"
+
+1525820982 d:\pantallas\publicidad.h
+
