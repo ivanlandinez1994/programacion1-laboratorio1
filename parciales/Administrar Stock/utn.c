@@ -234,6 +234,12 @@ int getStringNumeros(char mensaje[],char input[])
     }
     return 0;
 }
+/**
+ * \brief Solicita un texto alfanumérico al usuario y lo devuelve
+ * \param mensaje Es el mensaje a ser mostrado
+ * \param input Array donde se cargará el texto ingresado
+ * \return 1 si el texto contiene numeros y letras
+ */
 int getStringAlfaNumerico(char mensaje[],char input[])
 {
     char aux[256];
@@ -287,7 +293,6 @@ int getValidInt(char requestMessage[],char errorMessage[], int* input,int lowLim
         if (!getStringNumeros(requestMessage,auxStr))
         {
             printf ("%s",errorMessage);
-            break;
             continue;
 
         }
@@ -344,6 +349,17 @@ int getValidString(char requestMessage[],char errorMessage[], char errorMessageL
     }
     return retorno;
 }
+/**
+ * \brief Solicita una contraseña
+ * \param requestMessage Es el mensaje a ser mostrado para solicitar el dato
+ * \param errorMessage Es el mensaje a ser mostrado en caso de error de tipo
+ * \param errorMessageLenght Es el mensaje a ser mostrado en caso de error de longitud
+ * \param input Array donde se cargará el texto ingresado
+ * \param maxLenght int Longitud maxima del texto ingresado
+ * \param attemps indica la cantidad de reintentos ante un error
+ * \return 0 si consiguio un texto alfanumerico -1 si no
+ *
+ */
 int getValidAlfaNumerico(char requestMessage[],char errorMessage[], char errorMessageLenght[],char input[], int maxLenght,int attemps)
 {
     int i;

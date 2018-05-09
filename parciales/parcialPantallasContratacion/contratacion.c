@@ -96,7 +96,7 @@ int contratacion_alta(Contratacion* arrayContratacion,int limite, Pantalla* arra
                                     strcpy(arrayContratacion[auxiliarIdPantalla].archivo,auxiliarArchivo);
                                     arrayContratacion[i].isEmpty=0;
                                     arrayContratacion[i].idContratacion = contratacion_proximoId();
-                                    arrayContratacion[i].idPantalla = arrayPantalla[i].idPantalla; // preguntar
+                                    arrayContratacion[i].idPantalla = arrayPantalla[auxiliarIdPantalla].idPantalla; // preguntar
                                 }
                             }
                         }

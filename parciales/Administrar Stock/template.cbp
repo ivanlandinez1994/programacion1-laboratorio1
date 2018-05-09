@@ -34,14 +34,14 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="pantallas.c">
+		<Unit filename="productos.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="pantallas.h" />
-		<Unit filename="publicidad.c">
+		<Unit filename="productos.h" />
+		<Unit filename="proveedores.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="publicidad.h" />
+		<Unit filename="proveedores.h" />
 		<Unit filename="utn.c">
 			<Option compilerVar="CC" />
 		</Unit>

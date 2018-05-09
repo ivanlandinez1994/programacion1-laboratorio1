@@ -26,7 +26,7 @@
 
 1524700062 d:\template\fantasma.h
 
-1525637001 source:d:\programacion1-laboratorio1\template\fantasma.c
+1525822339 source:d:\programacion1-laboratorio1\template\fantasma.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -34,11 +34,11 @@
 	"fantasma.h"
 	"utn.h"
 
-1525636695 d:\programacion1-laboratorio1\template\fantasma.h
+1525822339 d:\programacion1-laboratorio1\template\fantasma.h
 
-1525631470 d:\programacion1-laboratorio1\template\utn.h
+1525822339 d:\programacion1-laboratorio1\template\utn.h
 
-1525633237 source:d:\programacion1-laboratorio1\template\main.c
+1525822339 source:d:\programacion1-laboratorio1\template\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -46,49 +46,50 @@
 	"fantasma.h"
 	"utn.h"
 
-1525631470 source:d:\programacion1-laboratorio1\template\utn.c
+1525822339 source:d:\programacion1-laboratorio1\template\utn.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 	<string.h>
 	"utn.h"
 
-1525814455 source:d:\pantallas\utn.c
+1525893558 source:d:\administrar stock\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"proveedores.h"
+	"productos.h"
+	"utn.h"
+
+1525882584 d:\administrar stock\proveedores.h
+
+1525887659 d:\administrar stock\productos.h
+
+1525822339 d:\administrar stock\utn.h
+
+1525893666 source:d:\administrar stock\productos.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"proveedores.h"
+	"productos.h"
+	"utn.h"
+
+1525884444 source:d:\administrar stock\proveedores.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"proveedores.h"
+	"productos.h"
+	"utn.h"
+
+1525822339 source:d:\administrar stock\utn.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 	<string.h>
 	"utn.h"
-
-1525649213 d:\pantallas\utn.h
-
-1525815011 source:d:\pantallas\pantallas.c
-	<stdio.h>
-	<stdlib.h>
-	<time.h>
-	<string.h>
-	"pantallas.h"
-	"utn.h"
-
-1525742670 d:\pantallas\pantallas.h
-
-1525820982 source:d:\pantallas\publicidad.c
-	<stdio.h>
-	<stdlib.h>
-	<time.h>
-	<string.h>
-	"pantallas.h"
-	"publicidad.h"
-	"utn.h"
-
-1525820982 source:d:\pantallas\main.c
-	<stdio.h>
-	<stdlib.h>
-	<time.h>
-	<string.h>
-	"pantallas.h"
-	"publicidad.h"
-	"utn.h"
-
-1525820982 d:\pantallas\publicidad.h
 
