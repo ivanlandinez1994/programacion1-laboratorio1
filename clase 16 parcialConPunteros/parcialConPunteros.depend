@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1526928519 source:d:\parcialconpunteros\clientes.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"clientes.h"
+	"validaciones.h"
+
+1526928540 d:\parcialconpunteros\clientes.h
+
+1526926856 d:\parcialconpunteros\validaciones.h
+
+1526928811 source:d:\parcialconpunteros\main.c
+	<stdio.h>
+	<stdlib.h>
+	"clientes.h"
+
+1526928757 source:d:\parcialconpunteros\validaciones.c
+
