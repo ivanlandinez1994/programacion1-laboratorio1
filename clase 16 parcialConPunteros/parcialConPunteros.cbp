@@ -38,6 +38,10 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="publicacion.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="publicacion.h" />
 		<Unit filename="validaciones.c">
 			<Option compilerVar="CC" />
 		</Unit>

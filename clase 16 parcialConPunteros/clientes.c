@@ -18,7 +18,7 @@ void cliente_delete(Cliente* this)
 
 int cliente_setNombre(Cliente* this, char* nombre)
 {
-    if(this!=NULL && esSoloLetras(nombre))
+    if(this!=NULL && valid_esSoloLetras(nombre))
     {
         strcpy(this->nombreCliente,nombre);
         return 1;
@@ -40,7 +40,7 @@ int cliente_getNombre(Cliente* this, char* nombre)
 
 int cliente_setApellido(Cliente* this, char* apellido)
 {
-    if(this!=NULL && esSoloLetras(apellido))
+    if(this!=NULL && valid_esSoloLetras(apellido))
     {
         strcpy(this->apellidoCliente, apellido);
         return 1;
@@ -62,7 +62,7 @@ int cliente_getApellido(Cliente* this, char* apellido)
 
 int cliente_setCuit(Cliente* this, float cuit)
 {
-    if(this!=NULL && esCuit(cuit))
+    if(this!=NULL && valid_esCuit(cuit))
     {
         this->cuit = cuit;
         return 1;
