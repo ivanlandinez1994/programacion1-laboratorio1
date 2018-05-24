@@ -3,33 +3,56 @@
 #include "clientes.h"
 #include "publicacion.h"
 
+void mostrar(Cliente* array[],int cantidad);
+void cargar(Cliente* array[],int cantidad);
+void modificar(Cliente* array[],int cantidad);
+
 int main()
 {
     Cliente* arrayClientePunteros[50];
-    Cliente* auxCliente;
-    Publicacion* arrayPunteroPublicacion[50];
-    Publicacion* auxPublicacion;
+    cargar(arrayClientePunteros, 50);
+
+    modificar(arrayClientePunteros, 50);
+    mostrar(arrayClientePunteros,50);
+
+    //Publicacion* arrayPunteroPublicacion[50];
+    //Publicacion* auxPublicacion;
+
+    return 0;
+}
+
+void cargar(Cliente** array,int cantidad)
+{
     int i;
-    float auxCuit;
-    int auxNumeroRubro;
-
-
-    for(i=0;i<50;i++)
+    for(i=0; i<cantidad; i++)
     {
-        auxCliente = cliente_new();
-        cliente_setCuit(auxCliente, i);
-        arrayClientePunteros[i]=auxCliente;
-
-        auxPublicacion = publicacion_new();
-        publicacion_setNumeroRubro(auxPublicacion, i);
-        arrayPunteroPublicacion[i]=auxPublicacion;
+        *(array+i) = cliente_newP("IVAN","LANDINEZ",95468562, i);
     }
-    for(i=0;i<50;i++)
-    {
-        cliente_getCuit(arrayClientePunteros[i],&auxCuit);
-        printf("Mem: %p - Cuit: %.0f\n",arrayClientePunteros[i],auxCuit);
-        publicacion_getNumeroRubro(arrayPunteroPublicacion[i], &auxNumeroRubro);
-        printf("Mem: %p - Num rubro: %d\n",arrayPunteroPublicacion[i],auxNumeroRubro);
+}
 
+void mostrar(Cliente** array,int cantidad)
+{
+    int i;
+    char apellidoCliente[50];
+    float cuit;
+    for(i=0; i<cantidad; i++)
+    {
+        cliente_getCuit(*(array+i),&cuit);
+        cliente_getApellido(*(array+i),apellidoCliente);
+        printf("\nApellido: %s - Cuit: %.0f",apellidoCliente,cuit);
+    }
+}
+
+void modificar(Cliente* array[],int cantidad)
+{
+    int i;
+    Cliente* auxCliente;
+    for(i=5; i<10; i++)
+    {
+        auxCliente = arrayCliente_getById(array, cantidad, i);
+        if(auxCliente!=NULL)
+        {
+            cliente_setCuit(auxCliente, 20954685625);
+        }
     }
 }

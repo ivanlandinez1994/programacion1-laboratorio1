@@ -18,7 +18,7 @@
 
 1526928757 source:d:\parcialconpunteros\validaciones.c
 
-1526928519 source:d:\programacion1-laboratorio1\clase 16 parcialconpunteros\clientes.c
+1527123979 source:d:\programacion1-laboratorio1\clase 16 parcialconpunteros\clientes.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -26,7 +26,26 @@
 	"clientes.h"
 	"validaciones.h"
 
-1526928540 d:\programacion1-laboratorio1\clase 16 parcialconpunteros\clientes.h
+1527123254 d:\programacion1-laboratorio1\clase 16 parcialconpunteros\clientes.h
 
-1527033482 d:\programacion1-laboratorio1\clase 16 parcialconpunteros\validaciones.h
+1527111890 d:\programacion1-laboratorio1\clase 16 parcialconpunteros\validaciones.h
+
+1527124121 source:d:\programacion1-laboratorio1\clase 16 parcialconpunteros\main.c
+	<stdio.h>
+	<stdlib.h>
+	"clientes.h"
+	"publicacion.h"
+
+1527111890 d:\programacion1-laboratorio1\clase 16 parcialconpunteros\publicacion.h
+
+1527111890 source:d:\programacion1-laboratorio1\clase 16 parcialconpunteros\publicacion.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"clientes.h"
+	"publicacion.h"
+	"validaciones.h"
+
+1527121298 source:d:\programacion1-laboratorio1\clase 16 parcialconpunteros\validaciones.c
 
