@@ -5,7 +5,7 @@
 #include "clientes.h"
 #include "validaciones.h"
 
-Cliente* cliente_new()
+Cliente* cliente_new(void)
 {
     return malloc(sizeof(Cliente));
 }
@@ -149,4 +149,16 @@ Cliente* arrayCliente_getById(Cliente** arrayCliente, int limite, int idCliente)
     }
 
     return retorno;
+}
+
+void arrayACliente_add(Alumno* array[],int cantidadMaxima,int* cantidadActual, char* nombre, char* apellido, float cuit, int id)
+{
+    //falta validar
+    array[*cantidadActual]  = alumno_newP( nombre,apellido,cuit,id);
+    (*cantidadActual)++;
+}
+
+void arrayAlumno_remove(Alumno* array[],int cantidadMaxima,int* cantidadActual, int id)
+{
+    //falta
 }

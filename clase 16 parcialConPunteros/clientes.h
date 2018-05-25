@@ -8,11 +8,14 @@ typedef struct
     int idCliente;
     int isEmpty;
 }Cliente;
-Cliente* cliente_new();
+Cliente* cliente_new(void);
 Cliente* cliente_newP(char* nombreCliente, char* apellidoCliente,  float cuit, int idCliente);
 void cliente_delete(Cliente* this);
 int cliente_setId(Cliente* this, int id);
 int cliente_setNewId(Cliente* this);
+
+void arrayACliente_add(Alumno* array[],int cantidadMaxima,int* cantidadActual, char* nombre, char* apellido, float cuit, int id);
+void arrayAlumno_remove(Alumno* array[],int cantidadMaxima,int* cantidadActual, int id);
 
 int cliente_getId(Cliente* this, int* cuit);
 int cliente_setNombre(Cliente* this, char* nombre);

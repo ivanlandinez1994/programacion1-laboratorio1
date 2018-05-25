@@ -4,24 +4,23 @@
 #include "publicacion.h"
 
 void mostrar(Cliente* array[],int cantidad);
-void cargar(Cliente* array[],int cantidad);
+void cargar(Cliente* array[],int cantidad, int* cantidadActual);
 void modificar(Cliente* array[],int cantidad);
 
 int main()
 {
-    Cliente* arrayClientePunteros[50];
-    cargar(arrayClientePunteros, 50);
+    int cantidadActualArrayAlumnos = 0;
+    int cantidadMaximaArrayAlumnos = 50;
+    Cliente* arrayClientePunteros[cantidadMaximaArrayAlumnos];
 
-    modificar(arrayClientePunteros, 50);
-    mostrar(arrayClientePunteros,50);
-
-    //Publicacion* arrayPunteroPublicacion[50];
-    //Publicacion* auxPublicacion;
+    cargar(arrayClientePunteros, cantidadMaximaArrayAlumnos, &cantidadActualArrayAlumnos);
+    //modificar(arrayClientePunteros, 50);
+    mostrar(arrayClientePunteros,cantidadActualArrayAlumnos);
 
     return 0;
 }
 
-void cargar(Cliente** array,int cantidad)
+void cargar(Cliente** array,int cantidad,int* cantidadActual)
 {
     int i;
     for(i=0; i<cantidad; i++)
